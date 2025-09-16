@@ -41,3 +41,29 @@ p.callout {
 #row4 p {
     margin-left: calc(100% * 2/6);
 }
+
+
+
+/* ************************************* */
+/* CSS for index2                        */
+/* ************************************* */
+
+/* inherit the basline main code, above, and add to it */
+#SecondLayout main {
+display: grid;
+grid-template-columns: repeat(6,auto);
+grid-template-rows: repeat(10,auto);
+grid-template-areas: 
+'......'
+'......'
+'......'
+'......'
+'......'
+'......'
+'......'
+'......'
+'......'
+'......';
+}
+
+#secondlayout #titleRow { grid-area: title; }
