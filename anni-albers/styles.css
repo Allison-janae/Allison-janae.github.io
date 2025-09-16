@@ -28,6 +28,9 @@ p.callout {
     line-height: 2rem;
     font-style: italic;
     float: right;
+    text-align: right;
+    padding-left: 2em;
+    margin-top: 0;
 }
 
 #row1 p,
