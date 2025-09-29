@@ -48,7 +48,7 @@ header {
     rhodieTitle {
         width: 50vw;
         left: 50vw;
-        background-color: #202020; 
+        background-color: black; 
     }
 
     rhodieTitle h1 {
