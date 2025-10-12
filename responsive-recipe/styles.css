@@ -1,4 +1,4 @@
- /* base (mobile) styles */
+/* base (mobile) styles */
 
         body {
             margin: 0;
@@ -31,7 +31,6 @@
             padding: 20px;
 
         }
-
         .ingredients,
         .directions {
             width: 100%;
@@ -39,10 +38,10 @@
 
         /*desktop / landscape tablet view*/
         @media (min-width: 768px) {
-            .recipecontainer {
+            recipe-container {
                 flex-direction: row;
                 /*put ingredients and directions side-by-side*/
-                justify-conent: space-between;
+                justify-content: space-between;
                 align-items: flex-start;
                 gap: 40px;
             }
