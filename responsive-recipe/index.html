@@ -11,6 +11,14 @@
     <!-- external and internal CSS -->
     <link rel="stylesheet" href="styles.css" media="all">
     <style>
+        /* base (mobile) styles */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
         h1 {
             text-align: center;
         }
@@ -19,30 +27,44 @@
             display: block;
             margin: 0 auto;
             max-width: 100%;
-            /*make it responsive*/
             height: 300px;
         }
-p {
-    text-align: center;
-}
+
+        p {
+            text-align: center;
+        }
 
         .recipe-container {
             display: flex;
+            flex-direction: coloumn;
+            /* mobile = stacked vertically*/
             justify-content: space-between;
             /*spacing between the two coloumns*/
-            align-items: flex-start;
             gap: 40px;
             padding: 20px;
-            flex-wrap: wrap;
 
         }
 
         .ingredients,
         .directions {
-            flex: 1;
-            /*take equal width*/
-            min-width: 300px;
-            /* helpful for responsiveness*/
+            width: 100%;
+        }
+
+        /*desktop / landscape tablet view*/
+        @media (min-width: 768px) {
+            .recipecontainer {
+                flex-direction: row;
+                /*put ingredients and directions side-by-side*/
+                justify-conent: space-between;
+                align-items: flex-start;
+                gap: 40px;
+            }
+
+            .ingredients,
+            .directions {
+                flex: 1;
+                min-width: 300px;
+            }
         }
     </style>
 
