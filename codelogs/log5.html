@@ -11,11 +11,11 @@
     <!-- external and internal CSS -->
     <link rel="stylesheet" href="styles.css" media="all">
     <style>
-       textarea{
-        length: 20in;
-        background-color: lightgray;
-        padding: 40px;
-       }
+        textarea {
+            length: 20in;
+            background-color: lightgray;
+            padding: 40px;
+        }
     </style>
 
 </head>
@@ -28,15 +28,38 @@
 
     <p>
         The key differences when using the HTML <img> tag and using the CSS Background-image
-        property are different codes functions, layouts, and accesibility.
+        property are different codes functions, layouts, and accesibility. An HTML img tag is for image content
+        that is part od the document. CSS background-image would be used for a layout or design for behind the document.
     </p>
 
-    <p> 
-        If you were wanting to insert an image in the HTML area it would look like this: 
+    <p>
+        If you were wanting to insert an image in the HTML area it would look like this:
 
     </p>
-        
-     <textarea> <img src="image.jpg" alt="describe the picture"> </textarea>
+
+    <textarea> <img src="image.jpg" alt="describe the picture"> </textarea>
+
+    <p>
+        If you were to put a background-image in the CSS it would be formatted like this:
+    </p>
+
+    <textarea>
+        div {
+            background-image: url("background.jpeg");
+        }
+    </textarea>
+
+    <p>
+        You can also use other CSS properties to customize how you want the layout of the background-image like this:
+    </p>
+
+    <textarea>
+        div {
+            background-size: cover;
+            background-position: center;
+        }
+    </textarea>
+
 
 </body>
 
