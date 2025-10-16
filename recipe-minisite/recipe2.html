@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cucumber Salad</title>
+
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        /* base (mobile) styles */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 300px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .recipe-container {
+            display: flex;
+            flex-direction: coloumn;
+            /* mobile = stacked vertically*/
+            justify-content: space-between;
+            /*spacing between the two coloumns*/
+            gap: 40px;
+            padding: 20px;
+
+        }
+
+        .ingredients,
+        .directions {
+            width: 100%;
+        }
+
+        /*desktop / landscape tablet view*/
+        @media (min-width: 768px) {
+            recipe-container {
+                flex-direction: row;
+                /*put ingredients and directions side-by-side*/
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 40px;
+            }
+
+            .ingredients,
+            .directions {
+                flex: 1;
+                min-width: 300px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Cucumber Salad</h1>
+        <img
+            src="https://nam12.safelinks.protection.outlook.com/?url=https%3A%2F%2Fallison-janae.github.io%2Ffavorite-recipe%2FBanana%2520bread.jpg&data=05%7C02%7Callison.j.phillips%40wsu.edu%7C07e0aa43f1b74e52b4ba08dde9a8b40d%7Cb52be471f7f147b4a8790c799bb53db5%7C0%7C0%7C638923633124113011%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=L5Div2X00uni7bKIfeoGEgqnCvxywKzrWeKiL5Owrvg%3D&reserved=0">
+        <p>Refreshing Summer Cucumber Salad</p>
+    </header>
+
+    <main>
+        <div class="recipe-container">
+            <div class="ingredients">
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>Cucumber Salad Ingredients</li>
+                    <ul>
+                        <li>1 pound English or seedless cucumbers (1 1/2 to 2 medium) </li>
+                        <li>1 small red onion</li>
+                        <li>1 1/4 teaspoons kosher salt</li>
+                        <li>3 tablespoons apple cider, distilled, white wine, or red wine vinegar</li>
+                        <li>2 teaspoons granulated sugar</li>
+                        <li>Freshly ground black pepper</li>
+                        <li>1 tablespoon coarsely chopped fresh dill (optional)</li>
+                    </ul>
+            </div>
+
+            <div class="directions">
+                <h2>Directions</h2>
+                <ol>
+                    <li>Prepare the cucumbers:
+                        <ol>
+                            <li>Slice the vegetables. Thinly slice red onion and cucumber. You can do this by hand or
+                                with a mandoline.</li>
+                            <li>Salt the cucumbers. Sprinkle the cucumbers with kosher salt and let sit for about 20
+                                minutes to leech excess water and concentrate the cucumber flavor.</li>
+                            <li> Assemble the salad. Toss the cucumbers and red onion with vinegar and sugar. Add fresh
+                                dill, if using.</li>
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer>
+        <p>© Allison J Phillips. Photo Credits: Photo by <a
+                href="https://unsplash.com/@weikhang95?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Wei
+                Khang Chong</a> on <a
+                href="https://unsplash.com/photos/a-loaf-of-banana-nut-bread-on-a-cutting-board-zJ4j3dfM8wA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
