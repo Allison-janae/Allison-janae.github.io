@@ -136,3 +136,18 @@ nav ul ul li {
     background-color: #555;
   }
 }
+
+body.home {
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+body.home header,
+body.home main,
+body.home footer {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+}
