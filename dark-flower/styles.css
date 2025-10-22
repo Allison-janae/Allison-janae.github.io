@@ -55,3 +55,28 @@ header {
         width: 45vw;
     }
 }
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h1, p {
+  color: var(--text-color);
+}
