@@ -80,3 +80,15 @@ body {
 h1, p {
   color: var(--text-color);
 }
+
+body.darkMode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+/* Optional: tweak headers, links, etc. */
+body.darkMode h1,
+body.darkMode h2,
+body.darkMode p {
+  color: #e0e0e0;
+}
