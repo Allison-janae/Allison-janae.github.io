@@ -1,3 +1,5 @@
+
+
 // set up DOM loading event listener 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -13,22 +15,3 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
-
-<body>
-    <script>
-  const toggle = document.getElementById('darkModeToggle');
-
-  // Load user's saved mode from localStorage (if any)
-  if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
-  }
-
-  toggle.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const isDark = document.body.classList.contains('dark-mode');
-    localStorage.setItem('darkMode', isDark);
-  });
-</script>
-
-</body>
-
