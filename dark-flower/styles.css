@@ -66,42 +66,46 @@ body {
   color: var(--text-color);
 }
 
-/* Dark mode overrides */
-body.DarkMode {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
+* {
+    box-sizing: border-box;
+    /* use border-box model on everything */
 }
 
-body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
+#demo {
+    display: flex;
+    flex-direction: row;
+    /* or column, row-reverse, column-reverse */
+    flex-wrap: wrap;
 }
 
-h1, p {
-  color: var(--text-color);
+#demo h1 {
+    flex-basis: 100%;
+    order: -1;
 }
 
-body.DarkMode {
-  background-color: #121212;
-  color: #e0e0e0;
+#demo p {
+    flex-basis: 20%;
+    padding-right: 1em;
+    margin-top: 0;
 }
 
-/* Optional: tweak headers, links, etc. */
-body.darkMode h1,
-body.darkMode h2,
-body.darkMode p {
-  color: #e0e0e0;
+#para1 {
+    order: 0;
+}
+
+#para2 {
+    order: 0;
+}
+
+#toggleDarkMode {
+    margin-top: 2em;
 }
 
 body.darkMode {
-  background-color: #121212;
-  color: #e0e0e0;
+    background-color: darkgrey;
+    color: white;
 }
 
-body.darkMode a {
-  color: #9ecbff;
-}
-
-body {
-  transition: background-color 0.3s, color 0.3s;
+body.darkMode h1 {
+    color: red;
 }
