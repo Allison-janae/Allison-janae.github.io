@@ -67,7 +67,7 @@ body {
 }
 
 /* Dark mode overrides */
-body.dark-mode {
+body.DarkMode {
   --bg-color: #121212;
   --text-color: #e0e0e0;
 }
@@ -81,7 +81,7 @@ h1, p {
   color: var(--text-color);
 }
 
-body.darkMode {
+body.DarkMode {
   background-color: #121212;
   color: #e0e0e0;
 }
