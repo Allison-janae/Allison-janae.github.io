@@ -92,3 +92,16 @@ body.darkMode h2,
 body.darkMode p {
   color: #e0e0e0;
 }
+
+body.darkMode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.darkMode a {
+  color: #9ecbff;
+}
+
+body {
+  transition: background-color 0.3s, color 0.3s;
+}

@@ -23,3 +23,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+let darkModeButton = document.querySelector("#toggleDarkMode");
