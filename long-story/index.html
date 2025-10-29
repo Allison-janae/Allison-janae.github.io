@@ -18,13 +18,19 @@ html, body {
 
 body {
   background-image: url("church-bells.jpg");
+
+  /* makes it scroll like one long image */
   background-repeat: no-repeat;
-  background-size: contain; /* shows full image */
   background-position: top center;
-  background-attachment: scroll;
-  background-color: black; /* fills below image */
-  height: 300vh; /* adjust until it scrolls how you like */
+  background-size: 100% auto; /* fits width, lets it be tall */
+
+  /* smooth color fill below the image */
+  background-color: black;
+
+  /* controls how far the scroll goes — tweak this until perfect */
+  height: 500vh;
 }
+
 		/* in-file CSS here */
 	</style>
 
