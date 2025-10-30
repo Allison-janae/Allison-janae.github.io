@@ -1,32 +1,48 @@
-/* All sections full-page height */
+/* Sections */
 section {
     position: relative;
     height: 100vh;
 }
 
-/* Content divs inside sections — right-aligned layout */
+/* Content div inside sections */
 section > .content {
     position: absolute;
-    width: 42vw;
     top: 20vh;
     right: 4vw;
+    width: 42vw;
 }
 
-/* Paragraphs inside content — white text and black semi-transparent box */
+/* Paragraphs inside content */
 section > .content p {
-    color: #fff;                          /* white text */
-    line-height: 1.5;
-    margin: 0 0 1rem 0;                   /* spacing between paragraphs */
+    display: block;                          /* ensures the box wraps the text */
+    color: #fff;
     font-size: 2rem;
-
-    background-color: rgba(0, 0, 0, 0.6); /* black semi-transparent box */
-    padding: 2rem;                        /* space inside the box */
-    border-radius: 0.5rem;                /* rounded corners */
-    display: block;                        /* ensures box wraps text */
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+    background-color: rgba(0, 0, 0, 0.6);   /* black semi-transparent */
+    padding: 2rem;                           /* space inside the box */
+    border-radius: 0.5rem;                   /* rounded corners */
+    width: fit-content;                       /* shrink box to text width */
+    max-width: 100%;                          /* don't exceed content div width */
     box-sizing: border-box;
 }
 
-/* Instructions at bottom of section */
+/* Title section h1 (untouched) */
+#section1 h1 {
+    font-size: 7rem;
+    line-height: 6rem;
+    font-family: Limelight, serif;
+    margin-left: -1rem;
+    padding-left: 0.5rem;
+    text-align: left;
+}
+
+/* Section 1 p (uppercase if needed) */
+#section1 p {
+    text-transform: uppercase;
+}
+
+/* Scroll instructions */
 section > .instructions {
     position: absolute;
     bottom: 2vh;
@@ -37,22 +53,6 @@ section > .instructions {
     font-size: 1rem;
     color: white;
     padding-left: 1rem;
-}
-
-/* Title section styling — h1 untouched */
-#section1 h1 {
-    font-size: 7rem;
-    line-height: 6rem;
-    font-family: Limelight, serif;
-    margin-left: -1rem;
-    padding-left: 0.5rem;
-    text-align: left;
-    /* No background here */
-}
-
-/* Transform text to uppercase in section 1 */
-#section1 p {
-    text-transform: uppercase;
 }
 
 /* Responsive adjustments */
