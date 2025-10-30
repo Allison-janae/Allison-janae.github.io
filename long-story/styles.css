@@ -1,31 +1,32 @@
-/* all sections are positioned relative and have a full-page height of 100vh */
+/* All sections have full-page height and are relative */
 section {
     position: relative;
     height: 100vh;
 }
 
-/* content divs within the sections are positioned absolutely to the top and right, almost half the page wide */
+/* Content divs inside sections */
 section > .content {
-    position: absolute;        /* keeps your right-aligned layout */
-    width: 42vw;               /* almost half the page */
+    position: absolute;        /* keeps right-aligned layout */
+    width: 42vw;               /* almost half the page width */
     top: 20vh;
     right: 4vw;
 
-    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black box */
-    padding: 1rem 2rem;                   /* space inside the box */
-    border-radius: 0.5rem;                /* optional rounded corners */
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+    padding: 2rem;                        /* space inside the box */
+    border-radius: 0.5rem;                /* rounded corners */
     box-sizing: border-box;               /* ensures padding doesn’t break width */
+    display: inline-block;                 /* wraps the content properly */
 }
 
-/* paragraphs inside the content divs */
+/* Paragraphs inside content divs */
 section > .content p {
-    color: #fff;           /* white text */
+    color: #fff;      /* white text */
     line-height: 1.5;
-    margin: 0;             /* remove default spacing */
-    font-size: 2rem;       /* adjust text size */
+    margin: 0;
+    font-size: 2rem;
 }
 
-/* position the "scroll down" instructions at the bottom of the screen, aligned with .content */
+/* Instructions at bottom of section, aligned with content */
 section > .instructions {
     position: absolute;
     bottom: 2vh;
@@ -35,10 +36,10 @@ section > .instructions {
     text-transform: uppercase;
     font-size: 1rem;
     color: white;
-    padding-left: 1rem; /* to align with paragraphs */
+    padding-left: 1rem;
 }
 
-/* title section styling */
+/* Title section styling */
 #section1 p,
 #section1 h1 {
     text-transform: uppercase;
@@ -51,6 +52,25 @@ section > .instructions {
     margin-left: -1rem;
     padding-left: 0.5rem;
     text-align: left;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    section > .content {
+        width: 80vw;
+        right: 10vw;
+        top: 15vh;
+        padding: 1.5rem;
+    }
+    
+    section > .content p {
+        font-size: 1.5rem;
+    }
+    
+    #section1 h1 {
+        font-size: 4rem;
+        line-height: 4.5rem;
+    }
 }
 
 
