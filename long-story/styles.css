@@ -4,7 +4,7 @@ section {
     height: 100vh;
 }
 
-/* Content divs inside sections (right-aligned) */
+/* Content divs inside sections — right-aligned layout */
 section > .content {
     position: absolute;
     width: 42vw;
@@ -12,36 +12,18 @@ section > .content {
     right: 4vw;
 }
 
-/* Paragraphs inside content — white text */
+/* Paragraphs inside content — white text and black semi-transparent box */
 section > .content p {
-    color: #fff;
+    color: #fff;                          /* white text */
     line-height: 1.5;
-    margin: 0 0 1rem 0;
+    margin: 0 0 1rem 0;                   /* spacing between paragraphs */
     font-size: 2rem;
-}
 
-/* Black semi-transparent box around paragraphs only */
-section > .content p {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 2rem;
-    border-radius: 0.5rem;
-    display: block;
+    background-color: rgba(0, 0, 0, 0.6); /* black semi-transparent box */
+    padding: 2rem;                        /* space inside the box */
+    border-radius: 0.5rem;                /* rounded corners */
+    display: block;                        /* ensures box wraps text */
     box-sizing: border-box;
-}
-
-/* Title section styling (h1 untouched) */
-#section1 p,
-#section1 h1 {
-    text-transform: uppercase;
-}
-
-#section1 h1 {
-    font-size: 7rem;
-    line-height: 6rem;
-    font-family: Limelight, serif;
-    margin-left: -1rem;
-    padding-left: 0.5rem;
-    text-align: left;
 }
 
 /* Instructions at bottom of section */
@@ -55,6 +37,22 @@ section > .instructions {
     font-size: 1rem;
     color: white;
     padding-left: 1rem;
+}
+
+/* Title section styling — h1 untouched */
+#section1 h1 {
+    font-size: 7rem;
+    line-height: 6rem;
+    font-family: Limelight, serif;
+    margin-left: -1rem;
+    padding-left: 0.5rem;
+    text-align: left;
+    /* No background here */
+}
+
+/* Transform text to uppercase in section 1 */
+#section1 p {
+    text-transform: uppercase;
 }
 
 /* Responsive adjustments */
