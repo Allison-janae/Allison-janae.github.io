@@ -52,7 +52,6 @@ section > .instructions {
     padding: 1rem 2rem;                   /* space around the text */
     border-radius: 0.5rem;                /* optional rounded corners */
     max-width: 800px;                     /* optional width limit */
-    margin: 1rem auto;                    /* center on page */
 }
 
 /* white text inside the box */
