@@ -46,3 +46,12 @@ section > .instructions {
     padding-left: 0.5rem; /* optional: reduce padding so it doesn’t push too far */
     text-align: left;
 }
+#section1 p {
+    color: #fff; /* white text */
+    background-color: rgba(0, 0, 0, 0.6); /* black with 60% opacity */
+    padding: 1rem 1.5rem; /* space inside the box */
+    border-radius: 0.5rem; /* optional: rounded corners */
+    max-width: 800px; /* optional: limits width for readability */
+    line-height: 1.5; /* improves readability */
+}
+
