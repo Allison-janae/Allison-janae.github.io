@@ -44,4 +44,5 @@ section > .instructions {
     font-family: Limelight, serif;
     margin-left: -1rem;  /* moves it further left */
     padding-left: 0.5rem; /* optional: reduce padding so it doesn’t push too far */
+    text-align: left;
 }
