@@ -6,16 +6,23 @@ section {
 
 /* content divs within the sections are positioned absolutely to the top and right, almost half the page wide */
 section > .content {
-    position: absolute;
-    width: 42vw;
+    position: absolute;        /* keeps your right-aligned layout */
+    width: 42vw;               /* almost half the page */
     top: 20vh;
     right: 4vw;
+
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black box */
+    padding: 1rem 2rem;                   /* space inside the box */
+    border-radius: 0.5rem;                /* optional rounded corners */
+    box-sizing: border-box;               /* ensures padding doesn’t break width */
 }
 
-/* paragraph tags are given a size and padding */
-section > .content > p {
-    font-size: 2rem;
-    padding: 1rem;
+/* paragraphs inside the content divs */
+section > .content p {
+    color: #fff;           /* white text */
+    line-height: 1.5;
+    margin: 0;             /* remove default spacing */
+    font-size: 2rem;       /* adjust text size */
 }
 
 /* position the "scroll down" instructions at the bottom of the screen, aligned with .content */
@@ -31,34 +38,21 @@ section > .instructions {
     padding-left: 1rem; /* to align with paragraphs */
 }
 
-/* transform the header and paragraph text in the title block */
+/* title section styling */
 #section1 p,
 #section1 h1 {
     text-transform: uppercase;
 }
 
-/* set font, size, and spacing on the h1 tag */
 #section1 h1 {
     font-size: 7rem;
     line-height: 6rem;
     font-family: Limelight, serif;
-    margin-left: -1rem;  /* moves it further left */
-    padding-left: 0.5rem; /* optional: reduce padding so it doesn’t push too far */
+    margin-left: -1rem;
+    padding-left: 0.5rem;
     text-align: left;
 }
-/* black semi-transparent box around all content paragraph divs */
-section > .content {
-    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
-    padding: 1rem 2rem;                   /* space inside the box */
-    border-radius: 0.5rem;                /* rounded corners */
-}
 
-/* white text inside the box */
-section > .content p {
-    color: #fff;      /* white text */
-    line-height: 1.5;
-    margin: 0;        /* remove default spacing inside the div */
-}
 
 
 
