@@ -1,32 +1,31 @@
-/* All sections have full-page height and are relative */
+/* All sections are full-page height */
 section {
     position: relative;
     height: 100vh;
 }
 
-/* Content divs inside sections */
+/* Content divs inside sections — keep layout right-aligned */
 section > .content {
-    position: absolute;        /* keeps right-aligned layout */
-    width: 42vw;               /* almost half the page width */
+    position: absolute;
+    width: 42vw;
     top: 20vh;
     right: 4vw;
-
-    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
-    padding: 2rem;                        /* space inside the box */
-    border-radius: 0.5rem;                /* rounded corners */
-    box-sizing: border-box;               /* ensures padding doesn’t break width */
-    display: inline-block;                 /* wraps the content properly */
 }
 
-/* Paragraphs inside content divs */
+/* Paragraphs inside content — white text on black semi-transparent box */
 section > .content p {
-    color: #fff;      /* white text */
+    color: #fff;                          /* white text */
     line-height: 1.5;
     margin: 0;
     font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.6); /* black semi-transparent box */
+    padding: 2rem;                        /* space inside the box */
+    border-radius: 0.5rem;
+    display: inline-block;                /* box wraps text properly */
+    box-sizing: border-box;
 }
 
-/* Instructions at bottom of section, aligned with content */
+/* Instructions at bottom of section */
 section > .instructions {
     position: absolute;
     bottom: 2vh;
@@ -60,11 +59,11 @@ section > .instructions {
         width: 80vw;
         right: 10vw;
         top: 15vh;
-        padding: 1.5rem;
     }
     
     section > .content p {
         font-size: 1.5rem;
+        padding: 1.5rem;
     }
     
     #section1 h1 {
