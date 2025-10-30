@@ -5,7 +5,7 @@ section {
 }
 
 /* Content div inside sections */
-section > .content {
+section>.content {
     position: absolute;
     top: 20vh;
     right: 4vw;
@@ -13,17 +13,23 @@ section > .content {
 }
 
 /* Paragraphs inside content */
-section > .content p {
-    display: block;                          /* ensures the box wraps the text */
+section>.content p {
+    display: block;
+    /* ensures the box wraps the text */
     color: #fff;
     font-size: 2rem;
     line-height: 1.5;
     margin: 0 0 1rem 0;
-    background-color: rgba(0, 0, 0, 0.6);   /* black semi-transparent */
-    padding: 2rem;                           /* space inside the box */
-    border-radius: 0.5rem;                   /* rounded corners */
-    width: fit-content;                       /* shrink box to text width */
-    max-width: 100%;                          /* don't exceed content div width */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* black semi-transparent */
+    padding: 2rem;
+    /* space inside the box */
+    border-radius: 0.5rem;
+    /* rounded corners */
+    width: fit-content;
+    /* shrink box to text width */
+    max-width: 100%;
+    /* don't exceed content div width */
     box-sizing: border-box;
 }
 
@@ -31,7 +37,8 @@ section > .content p {
 #section1 h1 {
     font-size: 7rem;
     line-height: 6rem;
-    font-family: 'Cinzel', serif; /* <- updated font */
+    font-family: 'Cinzel', serif;
+    /* <- updated font */
     margin-left: -1rem;
     padding-left: 0.5rem;
     text-align: left;
@@ -44,7 +51,7 @@ section > .content p {
 }
 
 /* Scroll instructions */
-section > .instructions {
+section>.instructions {
     position: absolute;
     bottom: 2vh;
     width: 42vw;
@@ -58,13 +65,13 @@ section > .instructions {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    section > .content {
+    section>.content {
         width: 80vw;
         right: 10vw;
         top: 15vh;
     }
 
-    section > .content p {
+    section>.content p {
         font-size: 1.5rem;
         padding: 1.5rem;
     }
@@ -72,9 +79,10 @@ section > .instructions {
     #section1 h1 {
         font-size: 4rem;
         line-height: 4.5rem;
+        color: #fff;
+        /* white text */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* subtle dark shadow */
     }
+
 }
-
-
-
-
