@@ -46,12 +46,20 @@ section > .instructions {
     padding-left: 0.5rem; /* optional: reduce padding so it doesn’t push too far */
     text-align: left;
 }
-#section2 p {
-    color: #fff; /* white text */
-    background-color: rgba(0, 0, 0, 0.6); /* black with 60% opacity */
-    padding: 1rem 1.5rem; /* space inside the box */
-    border-radius: 0.5rem; /* optional: rounded corners */
-    max-width: 800px; /* optional: limits width for readability */
-    line-height: 1.5; /* improves readability */
+/* black semi-transparent box around the paragraph */
+#section2 .content {
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+    padding: 1rem 2rem;                   /* space around the text */
+    border-radius: 0.5rem;                /* optional rounded corners */
+    max-width: 800px;                     /* optional width limit */
+    margin: 1rem auto;                    /* center on page */
 }
+
+/* white text inside the box */
+#section2 .content p {
+    color: #fff;
+    line-height: 1.5;
+    margin: 0; /* remove default spacing inside the div */
+}
+
 
