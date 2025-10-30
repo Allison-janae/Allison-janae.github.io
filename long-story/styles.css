@@ -42,6 +42,6 @@ section > .instructions {
     font-size: 7rem;
     line-height: 6rem;
     font-family: Limelight, serif;
-    margin-left: -0.4rem; /* due to the size and design of the font, bump it left a tiny bit for visual alignment */
-    padding-left: 1rem; /* to align with paragraphs */
+    margin-left: -1rem;  /* moves it further left */
+    padding-left: 0.5rem; /* optional: reduce padding so it doesn’t push too far */
 }
