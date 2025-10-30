@@ -46,19 +46,19 @@ section > .instructions {
     padding-left: 0.5rem; /* optional: reduce padding so it doesn’t push too far */
     text-align: left;
 }
-/* black semi-transparent box around the paragraph */
-#section2 .content {
+/* black semi-transparent box around all content divs */
+section > .content {
     background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
-    padding: 1rem 2rem;                   /* space around the text */
-    border-radius: 0.5rem;                /* optional rounded corners */
-    max-width: 800px;                     /* optional width limit */
+    padding: 1rem 2rem;                   /* space inside the box */
+    border-radius: 0.5rem;                /* rounded corners */
 }
 
 /* white text inside the box */
-#section2 .content p {
-    color: #fff;
+section > .content p {
+    color: #fff;      /* white text */
     line-height: 1.5;
-    margin: 0; /* remove default spacing inside the div */
+    margin: 0;        /* remove default spacing inside the div */
 }
+
 
 
