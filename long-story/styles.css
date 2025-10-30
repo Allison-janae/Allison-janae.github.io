@@ -1,10 +1,10 @@
-/* All sections are full-page height */
+/* All sections full-page height */
 section {
     position: relative;
     height: 100vh;
 }
 
-/* Content divs inside sections — keep layout right-aligned */
+/* Content divs inside sections (right-aligned) */
 section > .content {
     position: absolute;
     width: 42vw;
@@ -12,17 +12,36 @@ section > .content {
     right: 4vw;
 }
 
-/* Paragraphs inside content — white text on black semi-transparent box */
+/* Paragraphs inside content — white text */
 section > .content p {
-    color: #fff;                          /* white text */
+    color: #fff;
     line-height: 1.5;
-    margin: 0;
+    margin: 0 0 1rem 0;
     font-size: 2rem;
-    background-color: rgba(0, 0, 0, 0.6); /* black semi-transparent box */
-    padding: 2rem;                        /* space inside the box */
+}
+
+/* Black semi-transparent box around paragraphs only */
+section > .content p {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 2rem;
     border-radius: 0.5rem;
-    display: inline-block;                /* box wraps text properly */
+    display: block;
     box-sizing: border-box;
+}
+
+/* Title section styling (h1 untouched) */
+#section1 p,
+#section1 h1 {
+    text-transform: uppercase;
+}
+
+#section1 h1 {
+    font-size: 7rem;
+    line-height: 6rem;
+    font-family: Limelight, serif;
+    margin-left: -1rem;
+    padding-left: 0.5rem;
+    text-align: left;
 }
 
 /* Instructions at bottom of section */
@@ -38,21 +57,6 @@ section > .instructions {
     padding-left: 1rem;
 }
 
-/* Title section styling */
-#section1 p,
-#section1 h1 {
-    text-transform: uppercase;
-}
-
-#section1 h1 {
-    font-size: 7rem;
-    line-height: 6rem;
-    font-family: Limelight, serif;
-    margin-left: -1rem;
-    padding-left: 0.5rem;
-    text-align: left;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     section > .content {
@@ -60,12 +64,12 @@ section > .instructions {
         right: 10vw;
         top: 15vh;
     }
-    
+
     section > .content p {
         font-size: 1.5rem;
         padding: 1.5rem;
     }
-    
+
     #section1 h1 {
         font-size: 4rem;
         line-height: 4.5rem;
