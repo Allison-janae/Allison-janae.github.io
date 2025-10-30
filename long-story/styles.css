@@ -46,7 +46,7 @@ section > .instructions {
     padding-left: 0.5rem; /* optional: reduce padding so it doesn’t push too far */
     text-align: left;
 }
-/* black semi-transparent box around all content divs */
+/* black semi-transparent box around all content paragraph divs */
 section > .content {
     background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
     padding: 1rem 2rem;                   /* space inside the box */
