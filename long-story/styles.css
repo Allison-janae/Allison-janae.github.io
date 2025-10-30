@@ -31,11 +31,12 @@ section > .content p {
 #section1 h1 {
     font-size: 7rem;
     line-height: 6rem;
-    font-family: Limelight, serif;
+    font-family: 'Cinzel', serif; /* <- updated font */
     margin-left: -1rem;
     padding-left: 0.5rem;
     text-align: left;
 }
+
 
 /* Section 1 p (uppercase if needed) */
 #section1 p {
