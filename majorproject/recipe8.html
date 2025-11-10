@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homemade Salsa</title>
+
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        /* base (mobile) styles */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 300px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .recipe-container {
+            display: flex;
+            flex-direction: coloumn;
+            /* mobile = stacked vertically*/
+            justify-content: space-between;
+            /*spacing between the two coloumns*/
+            gap: 40px;
+            padding: 20px;
+
+        }
+
+        .ingredients,
+        .directions {
+            width: 100%;
+        }
+
+        /*desktop / landscape tablet view*/
+        @media (min-width: 768px) {
+            recipe-container {
+                flex-direction: row;
+                /*put ingredients and directions side-by-side*/
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 40px;
+            }
+
+            .ingredients,
+            .directions {
+                flex: 1;
+                min-width: 300px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Homemade Salsa</h1>
+        <img src="salsa.jpg">
+        <p>Savory Fresh Homemade Salsa</p>
+    </header>
+
+    <main>
+        <div class="recipe-container">
+            <div class="ingredients">
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>Salsa Ingredients</li>
+                    <ul>
+                        <li>¼ white onion, rinsed, dried, and roughly chopped</li>
+                        <li>1 garlic clove, chopped</li>
+                        <li> 1 pound Roma or other small tomatoes, cut into large chunks</li>
+                        <li> 1 jalapeño pepper, chopped (seeds removed, optional)</li>
+                        <li> ¼ cup fresh cilantro</li>
+                        <li>Juice and zest of 1 lime</li>
+                        <li> ½ teaspoon sea salt</li>
+                        <li> ¼ teaspoon ground cumin</li>
+                        <li>Pinch sugar</li>
+                    </ul>
+            </div>
+
+            <div class="directions">
+                <h2>Directions</h2>
+                <ol>
+                    <li>Prepare the salsa:
+                        <ol>
+                            <li>In a food processor, combine the onion and garlic. Pulse until well chopped.</li>
+                            <li>Add the tomatoes, jalapeno, cilantro, lime juice, lime zest, salt, cumin, and sugar.
+                                Pulse
+                                until combined but still chunky.</li>
+                            <li>The consistency of this salsa varies depending on the water
+                                content of the tomatoes. If it’s too watery, strain half to remove some of the liquid.
+                                Combine the chunky strained mixture with the remaining salsa. If you still prefer a
+                                chunkier
+                                texture, strain out more of the liquid to reach your desired consistency.</li>
+                        </ol>
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer>
+        <p>© Allison J Phillips. Photo Credits: Photo by <a href="https://unsplash.com/@covertnine">Tim Toomey
+            </a> on <a
+                href="https://unsplash.com/photos/brown-wooden-chopping-board-with-green-vegetable-and-brown-chips-h-sU3LASpJY">Unsplash</a>
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
