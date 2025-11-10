@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheese Ball Bites</title>
+
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        /* base (mobile) styles */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 300px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .recipe-container {
+            display: flex;
+            flex-direction: coloumn;
+            /* mobile = stacked vertically*/
+            justify-content: space-between;
+            /*spacing between the two coloumns*/
+            gap: 40px;
+            padding: 20px;
+
+        }
+
+        .ingredients,
+        .directions {
+            width: 100%;
+        }
+
+        /*desktop / landscape tablet view*/
+        @media (min-width: 768px) {
+            recipe-container {
+                flex-direction: row;
+                /*put ingredients and directions side-by-side*/
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 40px;
+            }
+
+            .ingredients,
+            .directions {
+                flex: 1;
+                min-width: 300px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Cheese Ball Bites</h1>
+        <img src="cheeseball.jpg">
+        <p>cheesey spreadible bites</p>
+    </header>
+
+    <main>
+        <div class="recipe-container">
+            <div class="ingredients">
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>Cheese Ball Ingredients</li>
+                    <ul>
+                        <li>12 ounces softened cream cheese 1 and 1/2 blocks</li>
+                        <li>1 tbsp ranch seasoning</li>
+                        <li>2 cups shredded cheddar cheese</li>
+                        <li>1 cup bacon bits</li>
+                        <li>1 tbsp fresh chopped parsley</li>
+                        <li>30 pretzel sticks</li>
+
+                    </ul>
+            </div>
+
+            <div class="directions">
+                <h2>Directions</h2>
+                <ol>
+                    <li>Prepare the Bites:
+                        <ol>
+                            <li>In a large mixing bowl, combine softened cream cheese, ranch seasoning, and shredded cheese.
+                            Mix until well incorporated.</li>
+                            <li>Line a baking sheet with parchment paper or a silicone baking mat, then begin rolling the
+                            cream cheese mixture into 1-inch sized balls, placing them on your prepared baking sheet as
+                            you go. Your hands will get messy, so feel free to wear gloves.</li>
+                            <li>In a medium mixing bowl, combine bacon bits and fresh parsley. Working one by one, roll each
+                            mini cheese ball in the bacon bits, coating the exterior completely. Then return to the
+                            prepared baking sheet.</li>
+                            <li>Insert a pretzel stick into the center of each bacon coated cheese ball bite before
+                            enjoying!</li>
+                        </ol>
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer>
+        <p>© Allison J Phillips. Photo Credits: Photo by <a href="https://unsplash.com/@zoshuacolah">Zoshua Colah
+            </a> on <a
+                href="https://unsplash.com/photos/fried-food-balls-with-tomato-sauce-are-served-M3Vax7A5Hac">Unsplash</a>
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
