@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Dip</title>
+
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        /* base (mobile) styles */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 300px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .recipe-container {
+            display: flex;
+            flex-direction: coloumn;
+            /* mobile = stacked vertically*/
+            justify-content: space-between;
+            /*spacing between the two coloumns*/
+            gap: 40px;
+            padding: 20px;
+
+        }
+
+        .ingredients,
+        .directions {
+            width: 100%;
+        }
+
+        /*desktop / landscape tablet view*/
+        @media (min-width: 768px) {
+            recipe-container {
+                flex-direction: row;
+                /*put ingredients and directions side-by-side*/
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 40px;
+            }
+
+            .ingredients,
+            .directions {
+                flex: 1;
+                min-width: 300px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Fruit Dip</h1>
+        <img src="fruitdip.jpg">
+        <p>Sweet Light & Creamy Fruit Dip</p>
+    </header>
+
+    <main>
+        <div class="recipe-container">
+            <div class="ingredients">
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>Fruit Dip Ingredients</li>
+                    <ul>
+                        <li>1 (7 ounce) jar marshmallow fluff</li>
+                        <li>1 (8 ounce) package cream cheese softened</li>
+                        <li>1 cup vanilla yogurt</li>
+                        <li>Splash of maraschino cherry juice</li>
+                    </ul>
+            </div>
+
+            <div class="directions">
+                <h2>Directions</h2>
+                <ol>
+                    <li>Prepare the Dip:</li>
+                    <ol>
+                        <li>Place all of the ingredients in a bowl and blend with a hand mixer until smooth.</li>
+                        <li>Refrigerate for 1-2 hours before serving</li>
+                        <li>Serve with fresh fruit.</li>
+                    </ol>
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer>
+        <p>© Allison J Phillips. Photo Credits: Photo by <a href="https://unsplash.com/@charindra">Charindra Salgado
+            </a> on <a
+                href="https://unsplash.com/photos/a-person-picking-up-some-fruit-from-a-box-KXOJyfHxSjA">Unsplash</a>
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
