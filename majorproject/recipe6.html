@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <!-- meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greek Feta Dip</title>
+
+    <!-- external and internal CSS -->
+    <link rel="stylesheet" href="styles.css" media="all">
+    <style>
+        /* base (mobile) styles */
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: 300px;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        .recipe-container {
+            display: flex;
+            flex-direction: coloumn;
+            /* mobile = stacked vertically*/
+            justify-content: space-between;
+            /*spacing between the two coloumns*/
+            gap: 40px;
+            padding: 20px;
+
+        }
+
+        .ingredients,
+        .directions {
+            width: 100%;
+        }
+
+        /*desktop / landscape tablet view*/
+        @media (min-width: 768px) {
+            recipe-container {
+                flex-direction: row;
+                /*put ingredients and directions side-by-side*/
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 40px;
+            }
+
+            .ingredients,
+            .directions {
+                flex: 1;
+                min-width: 300px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Greek Feta Dip</h1>
+        <img src="fetadip.jpg">
+        <p>Creamy refreshing Dip</p>
+    </header>
+
+    <main>
+        <div class="recipe-container">
+            <div class="ingredients">
+                <h2>Ingredients</h2>
+                <ul>
+                    <li>Greek dip Ingredients</li>
+                    <ul>
+                        <li> 8 ounces feta cheese drained</li>
+                        <li>1 cup plain Greek yogurt</li>
+                        <li>½ cup cream cheese 4 ounces, softened</li>
+                        <li>1 clove garlic minced fine</li>
+                        <li>2 teaspoons lemon juice</li>
+                        <li>1 teaspoon lemon zest</li>
+                        <li>2 tablespoons olive oil</li>
+                        <li>2 tablespoon fresh dill chopped</li>
+                        <li>Pinch of red pepper flakes</li>
+                        <li>Diced cucumbers diced tomatoes for garnish</li>
+                    </ul>
+            </div>
+
+            <div class="directions">
+                <h2>Directions</h2>
+                <ol>
+                    <li>Prepare the Dip:
+                        <ol>
+                            <li>In a large bowl, combine the feta, yogurt, cream cheese, garlic, lemon juice and zest,
+                                and
+                                olive oil.</li>
+                            <li>Using a hand mixer or stand mixer, combine until flight and fluffy.
+                                Remove to a serving bowl.</li>
+                            <li>Garnish with a drizzle of olive oil, fresh dill, red pepper flakes, diced cucumbers and
+                                tomatoes.</li>
+                            <li>Serve with bagel or pita bread or chips.</li>
+                        </ol>
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer>
+        <p>© Allison J Phillips. Photo Credits: Photo by <a href="https://unsplash.com/@andr1_aeschli">Andri Aeschlimann
+            </a> on <a
+                href="https://unsplash.com/photos/people-dipping-bread-into-a-pot-of-cheese-fondue-rxbiOsQAxkE">Unsplash</a>
+        </p>
+    </footer>
+
+
+</body>
+
+</html>
