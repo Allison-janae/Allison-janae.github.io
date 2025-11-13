@@ -38,7 +38,7 @@
 
         /*desktop / landscape tablet view*/
         @media (min-width: 768px) {
-            recipe-container {
+            .recipe-container {
                 flex-direction: row;
                 /*put ingredients and directions side-by-side*/
                 justify-content: space-between;
