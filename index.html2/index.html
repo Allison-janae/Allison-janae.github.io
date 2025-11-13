@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appetizer Collection</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fefcf5;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #e85a4f;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    nav a:hover { opacity: 0.8; }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav ul li {
+      position: relative;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      height: 60vh;
+      background: url('images/appetizers-hero.jpg') center/cover no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+
+    .hero-text {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #d44d42;
+      padding: 10px 20px;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover { background-color: #b94037; }
+
+    /* Featured Recipes Grid */
+    .featured {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .featured h2 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.5rem;
+      color: #e85a4f;
+    }
+
+    .recipe-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .recipe-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .recipe-card img {
+      width: 100%;
+      display: block;
+    }
+
+    .recipe-card h3 {
+      padding: 15px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      color: #e85a4f;
+    }
+
+    .recipe-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* About Section */
+    .about {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #fff3e6;
+    }
+
+    .about h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #e85a4f;
+      margin-bottom: 20px;
+    }
+
+    .about p { max-width: 800px; margin: 0 auto; }
+
+    /* Footer */
+    footer {
+      background-color: #e85a4f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    footer a { color: white; text-decoration: underline; }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .recipe-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">Appetizers</a>
+    <ul>
+      <li><a href="#">Hot Appetizers</a></li>
+      <li><a href="#">Cold Appetizers</a></li>
+      <li><a href="#">Favorite Sites</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Welcome to My Appetizer Collection</h1>
+      <p>Discover tasty appetizers to impress your guests!</p>
+      <a href="recipe1.html" class="btn">Try a Recipe</a>
+    </div>
+  </section>
+
+  <!-- Featured Recipes -->
+  <section class="featured">
+    <h2>Featured Recipes</h2>
+    <div class="recipe-grid">
+      <div class="recipe-card">
+        <img src="images/cheese-fondu.jpg" alt="Cheese Fondue">
+        <h3>Cheese Fondue</h3>
+      </div>
+      <div class="recipe-card">
+        <img src="images/bacon-wrapped-scallops.jpg" alt="Bacon Wrapped Scallops">
+        <h3>Bacon Wrapped Scallops</h3>
+      </div>
+      <div class="recipe-card">
+        <img src="images/greek-feta-dip.jpg" alt="Greek Feta Dip">
+        <h3>Greek Feta Dip</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about">
+    <h2>About This Site</h2>
+    <p>Hi, I’m Allison! I created this collection to share my love of appetizers that bring people together. Whether you love savory dips or light bites, there’s something here for every occasion.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Allison Janae | Follow me on <a href="#">Instagram</a> &bull; <a href="#">Pinterest</a></p>
+  </footer>
+</body>
+</html>
