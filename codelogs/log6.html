@@ -11,7 +11,64 @@
     <!-- external and internal CSS -->
     <link rel="stylesheet" href="styles.css" media="all">
     <style>
-        /* in-file CSS here */
+        /* General reset and font setup */
+body {
+    font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f9fafc;
+    color: #222;
+    line-height: 1.6;
+    margin: 0;
+    padding: 2rem;
+}
+
+/* Page container for nicer width */
+body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Headings */
+h1 {
+    font-size: 1.8rem;
+    color: #003366;
+    text-align: center;
+    border-bottom: 3px solid #007acc;
+    padding-bottom: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Paragraphs */
+p {
+    background: #ffffff;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin-bottom: 1.5rem;
+}
+
+/* Links */
+a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #005999;
+}
+
+/* Make sure it looks good on mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 1.4rem;
+    }
+}
+
     </style>
 
 </head>
