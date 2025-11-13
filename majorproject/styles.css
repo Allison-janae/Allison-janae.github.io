@@ -115,6 +115,11 @@ nav ul ul li {
   nav ul ul li a {
     background-color: #555;
   }
+  
+  nav ul li.clicked > ul {
+  display: block;
+}
+
 }
 
 /* Desktop/tablet layout */
