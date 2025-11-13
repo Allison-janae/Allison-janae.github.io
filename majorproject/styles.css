@@ -100,7 +100,7 @@ nav ul ul li {
     width: 100%;
   }
 
-  nav.show-menu > ul {
+  nav.clicked > ul {
     display: flex;
   }
 
