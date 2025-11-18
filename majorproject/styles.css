@@ -27,36 +27,20 @@ p {
   text-align: center;
 }
 
-/* Recipe layout */
-.recipe-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 20px;
-}
+/* ---------------- NAV BAR (UPDATED TO MATCH HOMEPAGE) ---------------- */
 
-.ingredients,
-.directions {
-  width: 100%;
-}
-
-/* Navigation button (mobile burger) */
-#navBurger {
-  display: none;
-  font-size: 28px;
-  padding: 10px;
-  cursor: pointer;
-  background-color: #f8f8f9;
-  color: white;
-}
-
-/* NEW NAV STYLING */
 nav {
   background-color: darkgreen;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
 }
 
 nav a {
@@ -69,67 +53,107 @@ nav a:hover {
   opacity: 0.8;
 }
 
+/* Menu layout */
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 nav ul li {
   position: relative;
 }
 
-/* Submenu */
+/* Dropdown */
 nav ul ul {
   display: none;
   position: absolute;
-  background-color: #444;
-  min-width: 160px;
-  z-index: 1000;
-}
-
-nav li:hover > ul {
-  display: block;
+  top: 100%;
+  background-color: #2e6b2e;
+  padding: 10px 0;
+  min-width: 150px;
+  border-radius: 4px;
 }
 
 nav ul ul li {
   display: block;
+  padding: 8px 15px;
 }
 
-/* Responsive nav */
+nav ul ul li a {
+  display: block;
+  white-space: nowrap;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+/* Burger icon */
+#navBurger {
+  font-size: 30px;
+  color: white;
+  display: none;
+  cursor: pointer;
+}
+
+/* ----------- Mobile Responsiveness ----------- */
 @media screen and (max-width: 768px) {
   #navBurger {
     display: block;
   }
 
-  nav > ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
+  nav {
+    flex-wrap: wrap;
   }
 
-  nav.clicked > ul {
+  nav ul {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    background-color: darkgreen;
+    padding: 10px 0;
+  }
+
+  nav.open ul {
     display: flex;
   }
 
-  nav > ul > li {
+  nav ul li {
     width: 100%;
+    text-align: center;
   }
 
   nav ul ul {
     position: static;
+    background-color: #225522;
+    width: 100%;
   }
 
-  nav ul ul li a {
-    background-color: #555;
+  nav ul ul li {
+    padding: 10px;
   }
 
-  nav ul li.clicked > ul {
+  nav ul li.open > ul {
     display: block;
   }
 }
 
-/* Desktop/tablet layout */
+/* -------- Recipe layout -------- */
+.recipe-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+.ingredients,
+.directions {
+  width: 100%;
+}
+
+/* Desktop/tablet recipe layout */
 @media (min-width: 768px) {
   .recipe-container {
     flex-direction: row;
@@ -145,7 +169,7 @@ nav ul ul li {
   }
 }
 
-/* Page background */
+/* Page background settings for home */
 body.home {
   background-image: url("background.jpg");
   background-size: cover;
@@ -168,4 +192,5 @@ main {
   margin: 0 auto;
   padding: 20px;
 }
+
 
