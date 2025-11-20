@@ -2,103 +2,135 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipes By Alli</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Recipes By Alli</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css" media="all">
+	<!-- CSS -->
+	<link rel="stylesheet" href="styles.css" media="all">
 
-    <!-- JS -->
-    <script defer>
-        function toggleNav() {
-            document.querySelector("nav").classList.toggle("open");
-        }
+	<!-- JS -->
+	<script defer>
+		document.addEventListener("DOMContentLoaded", () => {
 
-        // Mobile dropdown toggle
-        document.addEventListener("DOMContentLoaded", () => {
-            document.querySelectorAll("nav ul > li").forEach(li => {
-                li.addEventListener("click", function (e) {
-                    if (window.innerWidth <= 768 && this.querySelector("ul")) {
-                        e.preventDefault();
-                        this.classList.toggle("open");
-                    }
-                });
-            });
-        });
-    </script>
+			const nav = document.querySelector("nav");
+			const burger = document.querySelector("#navBurger");
+
+			// Toggle main nav
+			function toggleNav() {
+				nav.classList.toggle("open");
+			}
+			burger.addEventListener("click", toggleNav);
+
+			// Mobile submenu toggle
+			document.querySelectorAll("nav ul > li").forEach(li => {
+				li.addEventListener("click", function (e) {
+
+					// If user clicks an actual submenu link → let it navigate
+					if (e.target.tagName === "A" && !this.querySelector("ul")) return;
+					if (e.target.tagName === "A" && this.querySelector("ul") && e.target.parentElement.parentElement !== li) return;
+
+					// Only toggle the dropdown if tapping the parent, not a real link
+					if (window.innerWidth <= 768 && this.querySelector("ul")) {
+						e.preventDefault();
+						this.classList.toggle("open");
+					}
+				});
+			});
+
+			// Close nav after clicking any link
+			document.querySelectorAll("nav a").forEach(a => {
+				a.addEventListener("click", () => {
+					nav.classList.remove("open");
+				});
+			});
+
+		});
+	</script>
+
+
+	</script>
 </head>
 
 <body class="home">
 
-    <!-- ================= NAV BAR ================= -->
-    <nav id="mainNav">
-        <span class="logo">Allison Janae</span>
+	<!-- ================= NAV BAR ================= -->
+	<nav id="mainNav">
+		<span class="logo">Allison Janae</span>
 
-        <span id="navBurger" onclick="toggleNav()">&#9776;</span>
+		<span id="navBurger" onclick="toggleNav()">&#9776;</span>
 
-        <ul>
+		<ul>
 
-            <!-- HOME -->
-            <li><a href="index.html">Home</a></li>
+			<!-- HOME -->
+			<li><a href="index.html">Home</a></li>
 
-            <!-- HOT APPETIZERS -->
-            <li>
-                <a href="#">Hot Appetizers ▼</a>
-                <ul>
-                    <li><a href="recipe1.html">Cheese Fondue</a></li>
-                    <li><a href="recipe2.html">Nashville Hot Chicken Dip</a></li>
-                    <li><a href="recipe3.html">Bacon Wrapped Scallops</a></li>
-                    <li><a href="recipe4.html">Philly Cheesesteak Sliders</a></li>
-                    <li><a href="recipe5.html">Coconut Shrimp</a></li>
-                </ul>
-            </li>
+			<!-- HOT APPETIZERS -->
+			<li>
+				<a href="#">Hot Appetizers ▼</a>
+				<ul>
+					<li><a href="recipe1.html">Cheese Fondue</a></li>
+					<li><a href="recipe2.html">Nashville Hot Chicken Dip</a></li>
+					<li><a href="recipe3.html">Bacon Wrapped Scallops</a></li>
+					<li><a href="recipe4.html">Philly Cheesesteak Sliders</a></li>
+					<li><a href="recipe5.html">Coconut Shrimp</a></li>
+				</ul>
+			</li>
 
-            <!-- COLD APPETIZERS -->
-            <li>
-                <a href="#">Cold Appetizers ▼</a>
-                <ul>
-                    <li><a href="recipe6.html">Greek Feta Dip</a></li>
-                    <li><a href="recipe7.html">Fruit Dip</a></li>
-                    <li><a href="recipe8.html">Salsa</a></li>
-                    <li><a href="recipe9.html">Chicken Avocado Roll-ups</a></li>
-                    <li><a href="recipe10.html">Cheese Ball Bites</a></li>
-                </ul>
-            </li>
+			<!-- COLD APPETIZERS -->
+			<li>
+				<a href="#">Cold Appetizers ▼</a>
+				<ul>
+					<li><a href="recipe6.html">Greek Feta Dip</a></li>
+					<li><a href="recipe7.html">Fruit Dip</a></li>
+					<li><a href="recipe8.html">Salsa</a></li>
+					<li><a href="recipe9.html">Chicken Avocado Roll-ups</a></li>
+					<li><a href="recipe10.html">Cheese Ball Bites</a></li>
+				</ul>
+			</li>
 
-            <!-- FAVORITE SITES -->
-            <li>
-                <a href="#">Favorite Recipe Sites ▼</a>
-                <ul>
-                    <li><a href="https://www.allrecipes.com/recipe/13714/cheese-fondue/" target="_blank">All Recipes</a></li>
+			<!-- FAVORITE SITES -->
+			<li>
+				<a href="#">Favorite Recipe Sites ▼</a>
+				<ul>
+					<li><a href="https://www.allrecipes.com/recipe/13714/cheese-fondue/" target="_blank">All Recipes</a>
+					</li>
 
-                    <li><a href="https://emilybites.com/2023/09/nashville-hot-chicken-dip.html" target="_blank">Emily Bites</a></li>
+					<li><a href="https://emilybites.com/2023/09/nashville-hot-chicken-dip.html" target="_blank">Emily
+							Bites</a></li>
 
-                    <li><a href="https://www.dinneratthezoo.com/bacon-wrapped-scallops/" target="_blank">Dinner At The Zoo</a></li>
+					<li><a href="https://www.dinneratthezoo.com/bacon-wrapped-scallops/" target="_blank">Dinner At The
+							Zoo</a></li>
 
-                    <li><a href="https://thelatinahomemaker.com/philly-cheesesteak-sliders-recipe/" target="_blank">The Latin Homemaker</a></li>
+					<li><a href="https://thelatinahomemaker.com/philly-cheesesteak-sliders-recipe/" target="_blank">The
+							Latin Homemaker</a></li>
 
-                    <li><a href="https://sallysbakingaddiction.com/easy-coconut-shrimp/" target="_blank">Sally’s Baking Addiction</a></li>
+					<li><a href="https://sallysbakingaddiction.com/easy-coconut-shrimp/" target="_blank">Sally’s Baking
+							Addiction</a></li>
 
-                    <li><a href="https://www.taketwotapas.com/greek-feta-dip/" target="_blank">Take Two Tapas</a></li>
+					<li><a href="https://www.taketwotapas.com/greek-feta-dip/" target="_blank">Take Two Tapas</a></li>
 
-                    <li><a href="https://inspiredbycharm.com/easy-fruit-dip/" target="_blank">Inspired By Charm</a></li>
+					<li><a href="https://inspiredbycharm.com/easy-fruit-dip/" target="_blank">Inspired By Charm</a></li>
 
-                    <li><a href="https://www.loveandlemons.com/homemade-salsa-recipe/" target="_blank">Love and Lemons</a></li>
+					<li><a href="https://www.loveandlemons.com/homemade-salsa-recipe/" target="_blank">Love and
+							Lemons</a></li>
 
-                    <li><a href="https://gimmedelicious.com/chicken-and-avocado-roll-ups/" target="_blank">Gimme Delicious</a></li>
+					<li><a href="https://gimmedelicious.com/chicken-and-avocado-roll-ups/" target="_blank">Gimme
+							Delicious</a></li>
 
-                    <li><a href="https://dangthatssweet.com/mini-cheese-ball-bites/" target="_blank">Dang That’s Sweet</a></li>
-                </ul>
-            </li>
+					<li><a href="https://dangthatssweet.com/mini-cheese-ball-bites/" target="_blank">Dang That’s
+							Sweet</a></li>
+				</ul>
+			</li>
 
-        </ul>
-    </nav>
+		</ul>
+	</nav>
 
-    <!-- ================= PAGE CONTENT HERE ================= -->
-    <main>
-        <!-- Your recipe content goes here -->
-    </main>
+	<!-- ================= PAGE CONTENT HERE ================= -->
+	<main>
+		<!-- Your recipe content goes here -->
+	</main>
 
 </body>
+
 </html>
