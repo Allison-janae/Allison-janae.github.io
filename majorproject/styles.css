@@ -1,223 +1,29 @@
-/* Reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* Base styles (mobile-first) */
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  padding: 20px;
-}
-
-h1 {
-  text-align: center;
-}
-
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-}
-
-p {
-  text-align: center;
-}
-
-/* ---------------- NAV BAR (UPDATED TO MATCH HOMEPAGE) ---------------- */
-
-nav {
-  background-color: darkgreen;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-nav .logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: white;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  opacity: 0.8;
-}
-
-/* Menu layout */
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
-nav ul li {
-  position: relative;
-}
-
-/* Dropdown */
-nav ul ul {
-  display: none;
-  position: absolute;
-  top: 100%;
-  background-color: #2e6b2e;
-  padding: 10px 0;
-  min-width: 150px;
-  border-radius: 4px;
-}
-
-nav ul ul li {
-  display: block;
-  padding: 8px 15px;
-}
-
-nav ul ul li a {
-  display: block;
-  white-space: nowrap;
-}
-
-nav ul li:hover > ul {
-  display: block;
-}
-
-/* Burger icon */
-#navBurger {
-  font-size: 30px;
-  color: white;
-  display: none;
-  cursor: pointer;
-}
-
-/* ----------- Mobile Responsiveness ----------- */
-@media screen and (max-width: 768px) {
-  #navBurger {
-    display: block;
-  }
-
-  nav {
-    flex-wrap: wrap;
-  }
-
-  nav ul {
-    width: 100%;
-    flex-direction: column;
-    display: none;
-    background-color: darkgreen;
-    padding: 10px 0;
-  }
-
-  nav.open ul {
-    display: flex;
-  }
-
-  nav ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  nav ul ul {
-    position: static;
-    background-color: #225522;
-    width: 100%;
-  }
-
-  nav ul ul li {
-    padding: 10px;
-  }
-
-  nav ul li.open > ul {
-    display: block;
-  }
-}
-
-/* -------- Recipe layout -------- */
-.recipe-container {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  padding: 20px;
-}
-
-.ingredients,
-.directions {
-  width: 100%;
-}
-
-/* Desktop/tablet recipe layout */
-@media (min-width: 768px) {
-  .recipe-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
-  }
-
-  .ingredients,
-  .directions {
-    flex: 1;
-    min-width: 300px;
-  }
-}
-
-/* Page background settings for home */
-body.home {
-  background-image: url("background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-body.home header,
-body.home main,
-body.home footer {
-  background-color: rgba(255, 255, 255, 0.85);
-}
-
-main {
-  flex-grow: 1;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
 /* ============= HOMEPAGE HERO ============= */
 .hero {
   position: relative;
   height: 60vh;
-  background: url("background.jpg") center/cover no-repeat; /* <-- your image here */
+  background: url("background.jpg") center/cover no-repeat; /* <-- your hero image */
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
+  z-index: 0; /* hero behind nav */
 }
 
-/* Optional: overlay for contrast */
+/* Optional overlay for contrast */
 .hero::after {
   content: '';
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4); /* adjust opacity if you want it darker or lighter */
+  background: rgba(0,0,0,0.4); /* adjust opacity if needed */
+  z-index: 1; /* behind text but above hero image */
 }
-
 
 .hero-text {
   position: relative;
-  z-index: 1;
+  z-index: 2; /* above overlay */
 }
 
 .hero h1 {
@@ -245,70 +51,15 @@ main {
   background-color: #b94037;
 }
 
-/* ============= FEATURED RECIPES GRID ============= */
-.featured {
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 20px;
+/* ============= NAVIGATION FIX ============= */
+nav {
+  position: relative; /* ensures nav is above hero */
+  z-index: 10;
 }
 
-.featured h2 {
-  font-family: 'Playfair Display', serif;
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 2.5rem;
-  color: #e85a4f;
-}
-
-.recipe-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
-
-.recipe-card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  text-decoration: none;
-  color: inherit;
-}
-
-.recipe-card img {
-  width: 100%;
-  display: block;
-}
-
-.recipe-card h3 {
-  padding: 15px;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.2rem;
-  color: #e85a4f;
-}
-
-.recipe-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-/* ============= ABOUT SECTION ============= */
-.about {
-  text-align: center;
-  padding: 50px 20px;
-  background-color: #fff3e6;
-}
-
-.about h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  color: #e85a4f;
-  margin-bottom: 20px;
-}
-
-.about p {
-  max-width: 800px;
-  margin: 0 auto;
+nav ul ul {
+  position: absolute;
+  z-index: 20; /* dropdown above hero overlay */
 }
 
 /* MOBILE */
@@ -316,5 +67,6 @@ main {
   .hero h1 { font-size: 2rem; }
   .hero p { font-size: 1rem; }
 }
+
 
 
