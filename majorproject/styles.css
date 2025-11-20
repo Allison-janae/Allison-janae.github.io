@@ -197,7 +197,7 @@ main {
 .hero {
   position: relative;
   height: 60vh;
-  background: url("images/your-new-image.jpg") center/cover no-repeat; /* <-- your image here */
+  background: url("background.jpg") center/cover no-repeat; /* <-- your image here */
   display: flex;
   justify-content: center;
   align-items: center;
