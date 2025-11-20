@@ -49,3 +49,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+const burger = document.getElementById("navBurger");
+const nav = document.querySelector("nav");
+const navLinks = document.querySelectorAll("nav ul li a");
+
+// Toggle menu
+burger.addEventListener("click", () => {
+  nav.classList.toggle("open");
+});
+
+// Close menu when clicking any link (important!)
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+  });
+});
