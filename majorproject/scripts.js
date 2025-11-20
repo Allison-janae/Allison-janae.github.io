@@ -1,29 +1,44 @@
-// CLEAN MOBILE NAV SCRIPT — matches your CSS (nav.open)
-
-// Wait for DOM
 document.addEventListener("DOMContentLoaded", () => {
+  const nav = document.querySelector("nav");
+  const burger = document.getElementById("navBurger");
+  const topItems = document.querySelectorAll("nav > ul > li");
 
-    const burger = document.getElementById("navBurger");
-    const nav = document.querySelector("nav");
-    const navLinks = document.querySelectorAll("nav ul li a");
+  // ------------------ MOBILE MENU TOGGLE ------------------
+  burger.addEventListener("click", () => {
+    nav.classList.toggle("open"); // toggle mobile menu
+  });
 
-    // Toggle menu
-    burger.addEventListener("click", (e) => {
-        e.stopPropagation();       // Prevent click from bubbling to HTML
-        nav.classList.toggle("open");
-    });
+  // ------------------ MOBILE SUBMENU TOGGLE ------------------
+  topItems.forEach(item => {
+    const submenu = item.querySelector("ul");
 
-    // Close menu when clicking a nav link
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            nav.classList.remove("open");
-        });
-    });
-
-    // Also close menu if user taps anywhere outside the nav
-    document.addEventListener("click", (e) => {
-        if (!e.target.closest("nav")) {
-            nav.classList.remove("open");
+    if (submenu) {
+      item.addEventListener("click", (e) => {
+        // only toggle on mobile
+        if (window.innerWidth <= 768) {
+          e.preventDefault(); // prevent parent link navigation
+          item.classList.toggle("open");
         }
+      });
+    }
+  });
+
+  // ------------------ CLOSE MENU WHEN CLICKING OUTSIDE ------------------
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("nav")) {
+      nav.classList.remove("open"); // close main menu
+      topItems.forEach(item => item.classList.remove("open")); // close submenus
+    }
+  });
+
+  // ------------------ OPTIONAL: CLOSE MOBILE MENU WHEN LINK CLICKED ------------------
+  const navLinks = document.querySelectorAll("nav ul li a");
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 768) {
+        nav.classList.remove("open");
+        topItems.forEach(item => item.classList.remove("open"));
+      }
     });
+  });
 });
