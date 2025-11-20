@@ -197,7 +197,7 @@ main {
 .hero {
   position: relative;
   height: 60vh;
-  background: url("images/appetizers-hero.jpg") center/cover no-repeat;
+  background: url("images/your-new-image.jpg") center/cover no-repeat; /* <-- your image here */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,13 +205,15 @@ main {
   text-align: center;
 }
 
+/* Optional: overlay for contrast */
 .hero::after {
   content: '';
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.4); /* adjust opacity if you want it darker or lighter */
 }
+
 
 .hero-text {
   position: relative;
