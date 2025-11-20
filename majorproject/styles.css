@@ -186,7 +186,109 @@ nav ul li:hover > ul {
 
 .recipe-card h3 {
   padding: 15px;
-  font-family: 'Playfair Display',
-
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #e85a4f;
 }
 
+/* ==================== ABOUT SECTION ==================== */
+.about {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #fff3e6;
+}
+
+.about h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #e85a4f;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ==================== MOBILE RESPONSIVENESS ==================== */
+@media screen and (max-width: 768px) {
+
+  /* Nav */
+  #navBurger {
+    display: block;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    width: 100%;
+    flex-direction: column;
+    display: none;
+    background-color: darkgreen;
+    padding: 10px 0;
+  }
+
+  nav.open ul {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul ul {
+    position: static;
+    background-color: #225522;
+    width: 100%;
+    display: none; /* hide by default */
+  }
+
+  nav ul li.open > ul {
+    display: block;
+  }
+
+  nav ul ul li {
+    padding: 10px;
+  }
+
+  /* Body / Main */
+  body {
+    padding: 10px;
+  }
+
+  main {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  /* Hero */
+  .hero {
+    height: auto;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  /* Recipe grid */
+  .recipe-grid {
+    grid-template-columns: 1fr !important; /* single column */
+    gap: 15px;
+  }
+}
