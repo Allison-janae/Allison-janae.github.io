@@ -8,41 +8,30 @@
     <link rel="stylesheet" href="styles.css" media="all">
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
+        .recipe-page {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        h1, h2, p {
-            text-align: center;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
+        .recipe-page img {
             max-width: 100%;
-            height: 300px;
+            border-radius: 10px;
+            height: auto;
         }
 
-        .recipe-container {
+        .recipe-flex {
             display: flex;
             flex-direction: column;
             gap: 40px;
             margin-top: 30px;
         }
 
-        .ingredients, .directions {
-            width: 100%;
-        }
-
-        .ingredients ul, .directions ol {
-            margin-left: 20px;
-            text-align: left;
-        }
-
         @media (min-width: 768px) {
-            .recipe-container {
+            .recipe-flex {
                 flex-direction: row;
                 align-items: flex-start;
             }
@@ -51,75 +40,14 @@
             }
         }
 
-        /* NAVIGATION STYLES */
-        #mainNav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            background: #f8f8f8;
-            padding: 10px 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        .ingredients ul, .directions ol {
+            margin-left: 20px;
+            text-align: left;
+            margin-top: 10px;
         }
 
-        #mainNav ul {
-            display: none;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            width: 100%;
-        }
-
-        #mainNav ul li {
-            margin: 10px 0;
-        }
-
-        #mainNav ul li ul {
-            display: none;
-            padding-left: 20px;
-        }
-
-        #mainNav ul li:hover > ul {
-            display: block;
-        }
-
-        #navBurger {
-            cursor: pointer;
-            font-size: 24px;
-            display: inline-block;
-        }
-
-        #mainNav ul.open {
-            display: block;
-        }
-
-        #mainNav .logo {
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        @media (min-width: 768px) {
-            #mainNav ul {
-                display: flex;
-                gap: 20px;
-                width: auto;
-            }
-            #navBurger {
-                display: none;
-            }
-            #mainNav ul li {
-                margin: 0;
-            }
-            #mainNav ul li ul {
-                position: absolute;
-                background: #f8f8f8;
-                border: 1px solid #ccc;
-                display: none;
-            }
-            #mainNav ul li:hover > ul {
-                display: block;
-            }
+        h1, h2, p {
+            text-align: center;
         }
     </style>
 </head>
@@ -130,8 +58,10 @@
     <nav id="mainNav">
         <span class="logo">Allison Janae</span>
         <span id="navBurger">&#9776;</span>
+
         <ul>
             <li><a href="index.html">Home</a></li>
+
             <li>
                 <a href="#">Hot Appetizers ▼</a>
                 <ul>
@@ -142,6 +72,7 @@
                     <li><a href="recipe5.html">Coconut Shrimp</a></li>
                 </ul>
             </li>
+
             <li>
                 <a href="#">Cold Appetizers ▼</a>
                 <ul>
@@ -152,26 +83,19 @@
                     <li><a href="recipe10.html">Cheese Ball Bites</a></li>
                 </ul>
             </li>
-            <li>
-                <a href="#">Favorite Recipe Sites ▼</a>
-                <ul>
-                    <li><a href="https://www.allrecipes.com/" target="_blank">All Recipes</a></li>
-                    <li><a href="https://emilybites.com/" target="_blank">Emily Bites</a></li>
-                    <li><a href="https://www.dinneratthezoo.com/" target="_blank">Dinner At The Zoo</a></li>
-                    <li><a href="https://thelatinahomemaker.com/" target="_blank">The Latina Homemaker</a></li>
-                    <li><a href="https://sallysbakingaddiction.com/" target="_blank">Sally’s Baking Addiction</a></li>
-                </ul>
-            </li>
         </ul>
     </nav>
 
     <!-- CONTENT -->
     <div class="recipe-page">
+
         <h1>Cheese Ball Bites</h1>
         <img src="cheeseball.jpg" alt="Cheese Ball Bites">
         <p>Cheesy, spreadable bites</p>
 
-        <div class="recipe-container">
+        <div class="recipe-flex">
+
+            <!-- INGREDIENTS -->
             <div class="ingredients">
                 <h2>Ingredients</h2>
                 <ul>
@@ -184,6 +108,7 @@
                 </ul>
             </div>
 
+            <!-- DIRECTIONS -->
             <div class="directions">
                 <h2>Directions</h2>
                 <ol>
@@ -193,23 +118,17 @@
                     <li>Insert a pretzel stick into the center of each cheese ball before serving.</li>
                 </ol>
             </div>
+
         </div>
     </div>
 
     <!-- FOOTER -->
     <footer style="text-align:center; margin-top:40px;">
-        <p>© Allison J Phillips. Photo by <a href="https://unsplash.com/@zoshuacolah">Zoshua Colah</a> on <a href="https://unsplash.com/photos/fried-food-balls-with-tomato-sauce-are-served-M3Vax7A5Hac">Unsplash</a></p>
+        <p>© Allison J Phillips. Photo by 
+            <a href="https://unsplash.com/@zoshuacolah">Zoshua Colah</a> on 
+            <a href="https://unsplash.com/photos/fried-food-balls-with-tomato-sauce-are-served-M3Vax7A5Hac">Unsplash</a>
+        </p>
     </footer>
-
-    <script>
-        // MOBILE NAV TOGGLE
-        const navBurger = document.getElementById('navBurger');
-        const navMenu = document.querySelector('#mainNav ul');
-
-        navBurger.addEventListener('click', () => {
-            navMenu.classList.toggle('open');
-        });
-    </script>
 
 </body>
 </html>
