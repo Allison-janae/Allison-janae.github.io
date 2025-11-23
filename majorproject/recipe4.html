@@ -2,135 +2,156 @@
 <html>
 
 <head>
-
-    <!-- meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cheesesteak Sliders</title>
+    <title>Philly Cheesesteak Sliders</title>
 
-    <!-- external and internal CSS -->
     <link rel="stylesheet" href="styles.css" media="all">
+
     <style>
-        /* base (mobile) styles */
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
+        /* RECIPE PAGE WRAPPER */
+        .recipe-page {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            text-align: center;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
+        .recipe-page img {
             max-width: 100%;
-            height: 300px;
+            border-radius: 10px;
+            height: auto;
         }
 
-        p {
-            text-align: center;
-        }
-
-        .recipe-container {
+        /* FLEX LAYOUT */
+        .recipe-flex {
             display: flex;
-            flex-direction: coloumn;
-            /* mobile = stacked vertically*/
-            justify-content: space-between;
-            /*spacing between the two coloumns*/
+            flex-direction: column;
             gap: 40px;
-            padding: 20px;
-
+            margin-top: 30px;
         }
 
-        .ingredients,
-        .directions {
-            width: 100%;
-        }
-
-        /*desktop / landscape tablet view*/
         @media (min-width: 768px) {
-            recipe-container {
+            .recipe-flex {
                 flex-direction: row;
-                /*put ingredients and directions side-by-side*/
-                justify-content: space-between;
                 align-items: flex-start;
-                gap: 40px;
             }
-
-            .ingredients,
-            .directions {
+            .ingredients, .directions {
                 flex: 1;
-                min-width: 300px;
             }
+        }
+
+        .ingredients ul, .directions ol {
+            margin-left: 20px;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        h1, h2, p {
+            text-align: center;
         }
     </style>
-
 </head>
 
 <body>
 
-    <header>
-        <h1>Philly cheesesteak slider</h1>
-        <img src="phillycheese.jpg">
-        <p>delicious cheesy steak sliders</p>
-    </header>
+    <!-- NAVIGATION -->
+    <nav id="mainNav">
+        <span class="logo">Allison Janae</span>
+        <span id="navBurger">&#9776;</span>
 
-    <main>
-        <div class="recipe-container">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li>
+                <a href="#">Hot Appetizers ▼</a>
+                <ul>
+                    <li><a href="recipe1.html">Cheese Fondue</a></li>
+                    <li><a href="recipe2.html">Nashville Hot Chicken Dip</a></li>
+                    <li><a href="recipe3.html">Bacon Wrapped Scallops</a></li>
+                    <li><a href="recipe4.html">Philly Cheesesteak Sliders</a></li>
+                    <li><a href="recipe5.html">Coconut Shrimp</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Cold Appetizers ▼</a>
+                <ul>
+                    <li><a href="recipe6.html">Greek Feta Dip</a></li>
+                    <li><a href="recipe7.html">Fruit Dip</a></li>
+                    <li><a href="recipe8.html">Salsa</a></li>
+                    <li><a href="recipe9.html">Chicken Avocado Roll-ups</a></li>
+                    <li><a href="recipe10.html">Cheese Ball Bites</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Favorite Recipe Sites ▼</a>
+                <ul>
+                    <li><a href="https://www.allrecipes.com/" target="_blank">All Recipes</a></li>
+                    <li><a href="https://emilybites.com/" target="_blank">Emily Bites</a></li>
+                    <li><a href="https://www.dinneratthezoo.com/" target="_blank">Dinner At The Zoo</a></li>
+                    <li><a href="https://thelatinahomemaker.com/" target="_blank">The Latina Homemaker</a></li>
+                    <li><a href="https://sallysbakingaddiction.com/" target="_blank">Sally’s Baking Addiction</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="recipe-page">
+
+        <h1>Philly Cheesesteak Sliders</h1>
+        <img src="phillycheese.jpg" alt="Philly Cheesesteak Sliders">
+        <p>Delicious, cheesy, savory handheld sliders.</p>
+
+        <div class="recipe-flex">
+
+            <!-- INGREDIENTS -->
             <div class="ingredients">
                 <h2>Ingredients</h2>
                 <ul>
-                    <li>Cheesesteak Ingredients</li>
-                    <ul>
-                        <li>1 tablespoon of olive oil</li>
-                        <li>1 large onion, thinly sliced</li>
-                        <li>1 large green pepper, thinly sliced</li>
-                        <li>1⁄2 pound of fresh shaved steak</li>
-                        <li>1 tablespoon of Worcestershire sauce</li>
-                        <li>1⁄2 teaspoon of ground garlic powder</li>
-                        <li>salt and pepper to taste</li>
-                        <li>1 - 12 pack of sweet bread buns</li>
-                        <li>6 slices of provolone cheese</li>
-                        <li>1 tablespoon of melted butter</li>
-                        <li>1 teaspoon of dried thyme (not ground)</li>
-                        <li>1⁄2 teaspoon of Worcestershire sauce</li>
-                    </ul>
+                    <li>1 tbsp olive oil</li>
+                    <li>1 large onion, thinly sliced</li>
+                    <li>1 large green pepper, thinly sliced</li>
+                    <li>½ lb fresh shaved steak</li>
+                    <li>1 tbsp Worcestershire sauce</li>
+                    <li>½ tsp garlic powder</li>
+                    <li>Salt & pepper to taste</li>
+                    <li>1 (12-pack) sweet rolls</li>
+                    <li>6 slices provolone cheese</li>
+                    <li>1 tbsp melted butter</li>
+                    <li>1 tsp dried thyme</li>
+                    <li>½ tsp Worcestershire sauce (extra)</li>
+                </ul>
             </div>
 
+            <!-- DIRECTIONS -->
             <div class="directions">
                 <h2>Directions</h2>
                 <ol>
-                    <ol>
-                        <li>Preheat oven to 400 degrees Fahrenheit.</li>
-                        <li>In a large pan, heat oil and add in onions and green peppers. Cook over medium high heat,
-                            stirring occasionally until peppers and onions have softened.</li>
-                        <li>Next, add shaved steak, Worcestershire sauce, garlic powder, and salt and pepper. Cook
-                            steak, breaking it apart with two forks to prevent steak from clumping. Cook until the steak
-                            is no longer red. Set pan to the side.</li>
-                        <li>Slice sweet rolls in half horizontally, while keeping the 12 pack of buns intact. Place onto
-                            a baking sheet. Spread steak mixture over the bottom half of the buns, evenly. Top with
-                            cheese slices and the top half of the buns.
-                        <li>In a small bowl, mix together melted butter, dried thyme, and Worcestershire sauce together.
-                            Brush butter mixture generously over the top of the buns.</li>
-                        <li>Place sliders in the oven and bake for 17-20 minutes or until the top of the buns are golden
-                            and the cheese has melted. Serve and enjoy!</li>
-                    </ol>
+                    <li>Preheat oven to 400°F.</li>
+                    <li>Heat olive oil in a pan. Add onions and peppers and cook until softened.</li>
+                    <li>Add shaved steak, Worcestershire sauce, garlic powder, salt, and pepper. Cook until steak is no longer red.</li>
+                    <li>Slice sweet rolls in half horizontally, keeping them connected. Place bottom half on a baking sheet.</li>
+                    <li>Spread steak mixture evenly over the rolls. Top with provolone slices and the top half of the rolls.</li>
+                    <li>Mix melted butter, thyme, and remaining Worcestershire sauce. Brush over the rolls.</li>
+                    <li>Bake 17–20 minutes or until golden brown and cheese is melted. Serve warm.</li>
+                </ol>
             </div>
+
         </div>
+    </div>
 
-
-
-    </main>
-    <footer>
-        <p>© Allison J Phillips. Photo Credits: Photo by <a href="https://unsplash.com/@sfhashemi">Syed F Hashemi
-            </a> on <a href="https://unsplash.com/photos/burger-with-lettuce-and-tomato-om2Vhkv4Sgo">Unsplash</a>
+    <!-- FOOTER -->
+    <footer style="text-align:center; margin-top:40px;">
+        <p>© Allison J Phillips. Photo by 
+            <a href="https://unsplash.com/@sfhashemi">Syed F Hashemi</a> on 
+            <a href="https://unsplash.com/photos/burger-with-lettuce-and-tomato-om2Vhkv4Sgo">Unsplash</a>
         </p>
     </footer>
 
-
 </body>
-
 </html>
