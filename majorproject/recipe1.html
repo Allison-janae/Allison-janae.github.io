@@ -2,69 +2,57 @@
 <html>
 
 <head>
-
-    <!-- meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cheese Fondu</title>
+    <title>Cheese Fondue</title>
 
-    <!-- external and internal CSS -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="styles.css" media="all">
+
     <style>
-        /* base (mobile) styles */
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
+        /* RECIPE PAGE WRAPPER */
+        .recipe-page {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            text-align: center;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
+        /* IMAGE */
+        .recipe-page img {
             max-width: 100%;
-            height: 300px;
+            border-radius: 10px;
+            height: auto;
         }
 
-        p {
-            text-align: center;
-        }
-
-        .recipe-container {
+        /* LAYOUT OF INGREDIENTS + DIRECTIONS */
+        .recipe-flex {
             display: flex;
-            flex-direction: coloumn;
-            /* mobile = stacked vertically*/
-            justify-content: space-between;
-            /*spacing between the two coloumns*/
+            flex-direction: column;
             gap: 40px;
-            padding: 20px;
-
+            margin-top: 30px;
         }
 
-        .ingredients,
-        .directions {
-            width: 100%;
-        }
-
-        /*desktop / landscape tablet view*/
         @media (min-width: 768px) {
-            recipe-container {
+            .recipe-flex {
                 flex-direction: row;
-                /*put ingredients and directions side-by-side*/
-                justify-content: space-between;
                 align-items: flex-start;
-                gap: 40px;
             }
-
-            .ingredients,
-            .directions {
+            .ingredients, .directions {
                 flex: 1;
-                min-width: 300px;
             }
+        }
+
+        .ingredients ul, .directions ol {
+            margin-top: 10px;
+            margin-left: 20px;
+            text-align: left;
+        }
+
+        h1, h2, p {
+            text-align: center;
         }
     </style>
 
@@ -72,56 +60,95 @@
 
 <body>
 
-    <header>
-        <h1>Cheese Fondu</h1>
-        <img src="fondu.jpg">
-        <p>Warm cheesey savory dip</p>
-    </header>
+    <!-- NAVIGATION (same on all pages) -->
+    <nav id="mainNav">
+        <span class="logo">Allison Janae</span>
+        <span id="navBurger">&#9776;</span>
 
-    <main>
-        <div class="recipe-container">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li>
+                <a href="#">Hot Appetizers ▼</a>
+                <ul>
+                    <li><a href="recipe1.html">Cheese Fondue</a></li>
+                    <li><a href="recipe2.html">Nashville Hot Chicken Dip</a></li>
+                    <li><a href="recipe3.html">Bacon Wrapped Scallops</a></li>
+                    <li><a href="recipe4.html">Philly Cheesesteak Sliders</a></li>
+                    <li><a href="recipe5.html">Coconut Shrimp</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Cold Appetizers ▼</a>
+                <ul>
+                    <li><a href="recipe6.html">Greek Feta Dip</a></li>
+                    <li><a href="recipe7.html">Fruit Dip</a></li>
+                    <li><a href="recipe8.html">Salsa</a></li>
+                    <li><a href="recipe9.html">Chicken Avocado Roll-ups</a></li>
+                    <li><a href="recipe10.html">Cheese Ball Bites</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Favorite Recipe Sites ▼</a>
+                <ul>
+                    <li><a href="https://www.allrecipes.com/recipe/13714/cheese-fondue/" target="_blank">All Recipes</a></li>
+                    <li><a href="https://emilybites.com/2023/09/nashville-hot-chicken-dip.html" target="_blank">Emily Bites</a></li>
+                    <li><a href="https://www.dinneratthezoo.com/bacon-wrapped-scallops/" target="_blank">Dinner At The Zoo</a></li>
+                    <li><a href="https://thelatinahomemaker.com/philly-cheesesteak-sliders-recipe/" target="_blank">The Latin Homemaker</a></li>
+                    <li><a href="https://sallysbakingaddiction.com/easy-coconut-shrimp/" target="_blank">Sally’s Baking Addiction</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- ========== RECIPE CONTENT ========== -->
+    <div class="recipe-page">
+
+        <h1>Cheese Fondue</h1>
+        <img src="fondu.jpg" alt="Cheese Fondue">
+        <p>Warm, cheesy, savory dip perfect for bread, veggies, and more.</p>
+
+        <div class="recipe-flex">
+
+            <!-- INGREDIENTS -->
             <div class="ingredients">
                 <h2>Ingredients</h2>
                 <ul>
-                    <li>Cheese Fondu Ingredients</li>
-                    <ul>
-                        <li>1 cup dry white wine</li>
-                        <li>2 tablespoons all-purpose flour</li>
-                        <li>1/4th teaspoon ground nut-meg</li>
-                        <li>1/2 pound shredded swiss cheese</li>
-                        <li>1/2 pound shredded gruyere</li>
-                        <li>1/4th teaspoon salt</li>
-                        <li>1 pound loaf french bread</li>
-                    </ul>
+                    <li>1 cup dry white wine</li>
+                    <li>2 tablespoons all-purpose flour</li>
+                    <li>¼ teaspoon ground nutmeg</li>
+                    <li>½ pound shredded Swiss cheese</li>
+                    <li>½ pound shredded Gruyère cheese</li>
+                    <li>¼ teaspoon salt</li>
+                    <li>1 loaf French bread, cubed</li>
+                </ul>
             </div>
 
+            <!-- DIRECTIONS -->
             <div class="directions">
                 <h2>Directions</h2>
                 <ol>
-                    <li>heat fondu pot</li>
-                    <li>Prepare the Fondu:
-                        <ol>
-                            <li>Bring wine to a simmer in a fondue pot over medium-low</li>
-                            <li>Stir in flour and nutmeg until well combined.</li>
-                            <li>Add Swiss and Gruyère cheeses, 1/4 pound at a time, mixing after each addition until
-                                cheese is melted. Season with salt</li>
-                            <li>Serve with cut-up French bread.</li>
-                            <li>Enjoy!</li>
-                        </ol>
+                    <li>Heat fondue pot over medium-low.</li>
+                    <li>Bring wine to a gentle simmer.</li>
+                    <li>Stir in flour and nutmeg until smooth.</li>
+                    <li>Add cheeses slowly, melting fully between additions.</li>
+                    <li>Season with salt and serve with French bread.</li>
+                    <li>Enjoy!</li>
+                </ol>
             </div>
+
         </div>
+    </div>
 
-
-
-    </main>
-    <footer>
-        <p>© Allison J Phillips. Photo Credits: Photo by <a href="https://unsplash.com/@andr1_aeschli">Andri Aeschlimann
-            </a> on <a
-                href="https://unsplash.com/photos/people-dipping-bread-into-a-pot-of-cheese-fondue-rxbiOsQAxkE">Unsplash</a>
+    <!-- FOOTER -->
+    <footer style="text-align:center; margin-top:40px;">
+        <p>© Allison J Phillips. Photo by  
+            <a href="https://unsplash.com/@andr1_aeschli">Andri Aeschlimann</a> on 
+            <a href="https://unsplash.com/photos/people-dipping-bread-into-a-pot-of-cheese-fondue-rxbiOsQAxkE">Unsplash</a>
         </p>
     </footer>
 
-
 </body>
-
 </html>
