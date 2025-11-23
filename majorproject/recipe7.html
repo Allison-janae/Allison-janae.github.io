@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fruit Dip</title>
-
     <link rel="stylesheet" href="styles.css" media="all">
-
     <style>
         body {
             margin: 0;
@@ -15,7 +13,7 @@
             padding: 20px;
         }
 
-        h1, h2, p {
+        h1 {
             text-align: center;
         }
 
@@ -26,29 +24,35 @@
             height: 300px;
         }
 
+        p {
+            text-align: center;
+        }
+
         .recipe-container {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             gap: 40px;
-            margin-top: 30px;
+            padding: 20px;
         }
 
-        .ingredients, .directions {
+        .ingredients,
+        .directions {
             width: 100%;
-        }
-
-        .ingredients ul, .directions ol {
-            margin-left: 20px;
-            text-align: left;
         }
 
         @media (min-width: 768px) {
             .recipe-container {
                 flex-direction: row;
+                justify-content: space-between;
                 align-items: flex-start;
+                gap: 40px;
             }
-            .ingredients, .directions {
+
+            .ingredients,
+            .directions {
                 flex: 1;
+                min-width: 300px;
             }
         }
     </style>
@@ -59,17 +63,16 @@
     <header>
         <h1>Fruit Dip</h1>
         <img src="fruitdip.jpg" alt="Fruit Dip">
-        <p>Sweet, light, and creamy dip perfect for fresh fruit.</p>
+        <p>Sweet, Light & Creamy Dip</p>
     </header>
 
     <main>
         <div class="recipe-container">
-
             <div class="ingredients">
                 <h2>Ingredients</h2>
                 <ul>
-                    <li>1 (7 oz) jar marshmallow fluff</li>
-                    <li>1 (8 oz) package cream cheese, softened</li>
+                    <li>1 (7 ounce) jar marshmallow fluff</li>
+                    <li>1 (8 ounce) package cream cheese, softened</li>
                     <li>1 cup vanilla yogurt</li>
                     <li>Splash of maraschino cherry juice</li>
                 </ul>
@@ -78,22 +81,18 @@
             <div class="directions">
                 <h2>Directions</h2>
                 <ol>
-                    <li>Place all ingredients in a bowl.</li>
-                    <li>Blend with a hand mixer until smooth and creamy.</li>
-                    <li>Refrigerate for 1–2 hours before serving.</li>
-                    <li>Serve chilled with fresh fruit.</li>
+                    <li>In a large bowl, combine marshmallow fluff, cream cheese, vanilla yogurt, and cherry juice.</li>
+                    <li>Use a hand mixer or stand mixer to blend until smooth and creamy.</li>
+                    <li>Transfer to a serving bowl and refrigerate for 1–2 hours before serving.</li>
+                    <li>Serve with fresh fruit for dipping.</li>
                 </ol>
             </div>
-
         </div>
     </main>
 
-    <footer style="text-align:center; margin-top:40px;">
-        <p>© Allison J Phillips. Photo by <a href="https://unsplash.com/@charindra">Charindra Salgado</a> on 
-            <a href="https://unsplash.com/photos/a-person-picking-up-some-fruit-from-a-box-KXOJyfHxSjA">Unsplash</a>
-        </p>
+    <footer>
+        <p>© Allison J Phillips. Photo Credits: Photo by <a href="https://unsplash.com/@charindra">Charindra Salgado</a> on <a href="https://unsplash.com/photos/a-person-picking-up-some-fruit-from-a-box-KXOJyfHxSjA">Unsplash</a></p>
     </footer>
 
 </body>
-
 </html>
