@@ -2,157 +2,159 @@
 <html>
 
 <head>
-
-    <!-- meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nashville Hot Chicken Dip</title>
 
-    <!-- external and internal CSS -->
     <link rel="stylesheet" href="styles.css" media="all">
+
     <style>
-        /* base (mobile) styles */
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
+        /* RECIPE PAGE WRAPPER */
+        .recipe-page {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            text-align: center;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
+        .recipe-page img {
             max-width: 100%;
-            height: 300px;
+            border-radius: 10px;
+            height: auto;
         }
 
-        p {
-            text-align: center;
-        }
-
-        .recipe-container {
+        /* LAYOUT FOR INGREDIENTS + DIRECTIONS */
+        .recipe-flex {
             display: flex;
-            flex-direction: coloumn;
-            /* mobile = stacked vertically*/
-            justify-content: space-between;
-            /*spacing between the two coloumns*/
+            flex-direction: column;
             gap: 40px;
-            padding: 20px;
-
+            margin-top: 30px;
         }
 
-        .ingredients,
-        .directions {
-            width: 100%;
-        }
-
-        /*desktop / landscape tablet view*/
         @media (min-width: 768px) {
-            recipe-container {
+            .recipe-flex {
                 flex-direction: row;
-                /*put ingredients and directions side-by-side*/
-                justify-content: space-between;
                 align-items: flex-start;
-                gap: 40px;
             }
-
-            .ingredients,
-            .directions {
+            .ingredients, .directions {
                 flex: 1;
-                min-width: 300px;
             }
+        }
+
+        .ingredients ul, .directions ol {
+            margin-top: 10px;
+            margin-left: 20px;
+            text-align: left;
+        }
+
+        h1, h2, p {
+            text-align: center;
         }
     </style>
-
 </head>
 
 <body>
 
-    <header>
-        <h1>Nashville Hot Chicken Dip</h1>
-        <img src="chickendip.jpg">
-        <p>Spicy Flavorful Chicken Dip</p>
-    </header>
+    <!-- NAVIGATION -->
+    <nav id="mainNav">
+        <span class="logo">Allison Janae</span>
+        <span id="navBurger">&#9776;</span>
 
-    <main>
-        <div class="recipe-container">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li>
+                <a href="#">Hot Appetizers ▼</a>
+                <ul>
+                    <li><a href="recipe1.html">Cheese Fondue</a></li>
+                    <li><a href="recipe2.html">Nashville Hot Chicken Dip</a></li>
+                    <li><a href="recipe3.html">Bacon Wrapped Scallops</a></li>
+                    <li><a href="recipe4.html">Philly Cheesesteak Sliders</a></li>
+                    <li><a href="recipe5.html">Coconut Shrimp</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Cold Appetizers ▼</a>
+                <ul>
+                    <li><a href="recipe6.html">Greek Feta Dip</a></li>
+                    <li><a href="recipe7.html">Fruit Dip</a></li>
+                    <li><a href="recipe8.html">Salsa</a></li>
+                    <li><a href="recipe9.html">Chicken Avocado Roll-ups</a></li>
+                    <li><a href="recipe10.html">Cheese Ball Bites</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Favorite Recipe Sites ▼</a>
+                <ul>
+                    <li><a href="https://www.allrecipes.com/" target="_blank">All Recipes</a></li>
+                    <li><a href="https://emilybites.com/" target="_blank">Emily Bites</a></li>
+                    <li><a href="https://www.dinneratthezoo.com/" target="_blank">Dinner At The Zoo</a></li>
+                    <li><a href="https://thelatinahomemaker.com/" target="_blank">The Latin Homemaker</a></li>
+                    <li><a href="https://sallysbakingaddiction.com/" target="_blank">Sally’s Baking Addiction</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- RECIPE CONTENT -->
+    <div class="recipe-page">
+
+        <h1>Nashville Hot Chicken Dip</h1>
+        <img src="chickendip.jpg" alt="Nashville Hot Chicken Dip">
+        <p>Spicy, creamy, flavorful — the perfect party dip.</p>
+
+        <div class="recipe-flex">
+
+            <!-- INGREDIENTS -->
             <div class="ingredients">
                 <h2>Ingredients</h2>
                 <ul>
-                    <li>Nashiville Hot Chicken Dip Ingredients</li>
-                    <ul>
-                        <li>
-                            8 oz 1/3 less fat cream cheese, softened to room temperature </li>
-                        <li>
-                            ⅓ cup fat free sour cream </li>
-                        <li>
-                            ⅓ cup nonfat plain Greek yogurt</li>
-                        <li>
-                            2 tablespoons hot sauce </li>
-                        <li>
-                            1 tablespoon dill pickle juice, from a jar of pickles</li>
-                        <li>
-                            1 teaspoon honey</li>
-                        <li>
-                            1 tablespoon light butter</li>
-                        <li>
-                            2 teaspoons packed brown sugar</li>
-                        <li>
-                            1 teaspoon ground cayenne</li>
-                        <li>
-                            ½ teaspoon paprika</li>
-                        <li>
-                            ½ teaspoon chili powder</li>
-                        <li>
-                            ½ teaspoon garlic powder</li>
-                        <li>
-                            ½ teaspoon salt</li>
-                        <li>
-                            2 oz shredded 2% milk Mozzarella cheese</li>
-                        <li>
-                            8 oz cooked shredded chicken breast </li>
-                        <li>
-                            ¼ cup chopped dill pickles</li>
-                    </ul>
+                    <li>8 oz reduced-fat cream cheese, softened</li>
+                    <li>⅓ cup fat-free sour cream</li>
+                    <li>⅓ cup nonfat Greek yogurt</li>
+                    <li>2 tbsp hot sauce</li>
+                    <li>1 tbsp dill pickle juice</li>
+                    <li>1 tsp honey</li>
+                    <li>1 tbsp light butter</li>
+                    <li>2 tsp brown sugar</li>
+                    <li>1 tsp cayenne pepper</li>
+                    <li>½ tsp paprika</li>
+                    <li>½ tsp chili powder</li>
+                    <li>½ tsp garlic powder</li>
+                    <li>½ tsp salt</li>
+                    <li>2 oz shredded mozzarella (2% milk)</li>
+                    <li>8 oz cooked shredded chicken breast</li>
+                    <li>¼ cup chopped dill pickles</li>
+                </ul>
             </div>
 
+            <!-- DIRECTIONS -->
             <div class="directions">
                 <h2>Directions</h2>
                 <ol>
-                    <li>Prepare the Dip:
-                            <li>Pre-heat the oven to 350 degrees Fahrenheit.</li>
-                            <li>
-                                Place the cream cheese, sour cream, yogurt, hot sauce, pickle juice, and honey into a
-                                large mixing bowl and stir together until well mixed. Place the butter in a small dish
-                                and microwave 15-30 seconds on high to melt. Stir in the brown sugar, cayenne pepper,
-                                paprika, chili powder, garlic powder, and salt until the sugar is dissolved and
-                                everything is mixed. Pour the spiced butter into the mixing bowl with the cream cheese
-                                mixture and stir together. Add the mozzarella cheese and shredded chicken and stir until
-                                thoroughly combined.</li>
-                            <li>
-                                Transfer the mixture to a 9” pie plate and spread out evenly with a spatula. Place in
-                                the
-                                oven and bake for 25-30 minutes until hot. Sprinkle the chopped pickles across the top
-                                before serving. Serve hot. </li>
-                    </li>
+                    <li>Preheat oven to 350°F.</li>
+                    <li>Mix cream cheese, sour cream, yogurt, hot sauce, pickle juice, and honey.</li>
+                    <li>Melt butter, then stir in brown sugar, cayenne, paprika, chili powder, garlic powder, and salt.</li>
+                    <li>Combine spiced butter with cheese mixture, then stir in mozzarella and chicken.</li>
+                    <li>Spread mixture in a 9” pie dish and bake 25–30 minutes.</li>
+                    <li>Top with chopped pickles and serve warm.</li>
                 </ol>
             </div>
+
         </div>
+    </div>
 
-
-
-    </main>
-    <footer>
-        <p>© Allison J Phillips. Photo Credits: Photo by <a href="https://unsplash.com/@hybridstorytellers">Hybrid
-                Storytellers</a> on <a
-                href="https://unsplash.com/photos/two-plates-of-food-on-a-wooden-table-1UL9EgSV3aA">Unsplash</a>
+    <!-- FOOTER -->
+    <footer style="text-align:center; margin-top:40px;">
+        <p>© Allison J Phillips. Photo by 
+            <a href="https://unsplash.com/@hybridstorytellers">Hybrid Storytellers</a> on 
+            <a href="https://unsplash.com/photos/two-plates-of-food-on-a-wooden-table-1UL9EgSV3aA">Unsplash</a>
+        </p>
     </footer>
 
-
 </body>
-
 </html>
