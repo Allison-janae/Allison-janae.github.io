@@ -2,139 +2,153 @@
 <html>
 
 <head>
-
-    <!-- meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coconut Shrimp</title>
 
-    <!-- external and internal CSS -->
     <link rel="stylesheet" href="styles.css" media="all">
+
     <style>
-        /* base (mobile) styles */
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
+        /* RECIPE PAGE WRAPPER */
+        .recipe-page {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            text-align: center;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
+        .recipe-page img {
             max-width: 100%;
-            height: 300px;
+            border-radius: 10px;
+            height: auto;
         }
 
-        p {
-            text-align: center;
-        }
-
-        .recipe-container {
+        /* FLEX LAYOUT */
+        .recipe-flex {
             display: flex;
-            flex-direction: coloumn;
-            /* mobile = stacked vertically*/
-            justify-content: space-between;
-            /*spacing between the two coloumns*/
+            flex-direction: column;
             gap: 40px;
-            padding: 20px;
-
+            margin-top: 30px;
         }
 
-        .ingredients,
-        .directions {
-            width: 100%;
-        }
-
-        /*desktop / landscape tablet view*/
         @media (min-width: 768px) {
-            recipe-container {
+            .recipe-flex {
                 flex-direction: row;
-                /*put ingredients and directions side-by-side*/
-                justify-content: space-between;
                 align-items: flex-start;
-                gap: 40px;
             }
-
-            .ingredients,
-            .directions {
+            .ingredients, .directions {
                 flex: 1;
-                min-width: 300px;
             }
+        }
+
+        .ingredients ul, .directions ol {
+            margin-left: 20px;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        h1, h2, p {
+            text-align: center;
         }
     </style>
-
 </head>
 
 <body>
 
-    <header>
-        <h1>Coconut Shrimp</h1>
-        <img src="coconutshrimp.jpg">
-        <p>Crunchy Coconut Shrimp</p>
-    </header>
+    <!-- NAVIGATION -->
+    <nav id="mainNav">
+        <span class="logo">Allison Janae</span>
+        <span id="navBurger">&#9776;</span>
 
-    <main>
-        <div class="recipe-container">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li>
+                <a href="#">Hot Appetizers ▼</a>
+                <ul>
+                    <li><a href="recipe1.html">Cheese Fondue</a></li>
+                    <li><a href="recipe2.html">Nashville Hot Chicken Dip</a></li>
+                    <li><a href="recipe3.html">Bacon Wrapped Scallops</a></li>
+                    <li><a href="recipe4.html">Philly Cheesesteak Sliders</a></li>
+                    <li><a href="recipe5.html">Coconut Shrimp</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Cold Appetizers ▼</a>
+                <ul>
+                    <li><a href="recipe6.html">Greek Feta Dip</a></li>
+                    <li><a href="recipe7.html">Fruit Dip</a></li>
+                    <li><a href="recipe8.html">Salsa</a></li>
+                    <li><a href="recipe9.html">Chicken Avocado Roll-ups</a></li>
+                    <li><a href="recipe10.html">Cheese Ball Bites</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Favorite Recipe Sites ▼</a>
+                <ul>
+                    <li><a href="https://www.allrecipes.com/" target="_blank">All Recipes</a></li>
+                    <li><a href="https://emilybites.com/" target="_blank">Emily Bites</a></li>
+                    <li><a href="https://www.dinneratthezoo.com/" target="_blank">Dinner At The Zoo</a></li>
+                    <li><a href="https://thelatinahomemaker.com/" target="_blank">The Latina Homemaker</a></li>
+                    <li><a href="https://sallysbakingaddiction.com/" target="_blank">Sally’s Baking Addiction</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="recipe-page">
+
+        <h1>Coconut Shrimp</h1>
+        <img src="coconutshrimp.jpg" alt="Coconut Shrimp">
+        <p>Crunchy and flavorful coconut shrimp, perfect as an appetizer.</p>
+
+        <div class="recipe-flex">
+
+            <!-- INGREDIENTS -->
             <div class="ingredients">
                 <h2>Ingredients</h2>
                 <ul>
-                    <li>Coconut Shrimp Ingredients</li>
-                    <ul>
-                        <li>1/3 cup all-purpose flour or whole wheat flour (spooned & leveled)</li>
-                        <li>1/2 teaspoon salt</li>
-                        <li>1/2 teaspoon ground black pepper</li>
-                        <li>2 large eggs, beaten</li>
-                        <li>3/4 cup Panko bread crumbs</li>
-                        <li>1 cup sweetened shredded coconut</li>
-                        <li>1 pound raw large shrimp, peeled and deveined with tails attached</li>
-                        <li>3–4 Tablespoons vegetable oil or coconut oil (or olive oil)*</li>
-                        <li>optional for topping: 1 Tablespoon finely chopped cilantro</li>
-
-                    </ul>
+                    <li>1/3 cup all-purpose flour or whole wheat flour (spooned & leveled)</li>
+                    <li>1/2 tsp salt</li>
+                    <li>1/2 tsp black pepper</li>
+                    <li>2 large eggs, beaten</li>
+                    <li>3/4 cup Panko bread crumbs</li>
+                    <li>1 cup sweetened shredded coconut</li>
+                    <li>1 lb raw large shrimp, peeled and deveined, tails attached</li>
+                    <li>3–4 tbsp vegetable oil or coconut oil</li>
+                    <li>Optional: 1 tbsp chopped cilantro for garnish</li>
+                </ul>
             </div>
 
+            <!-- DIRECTIONS -->
             <div class="directions">
                 <h2>Directions</h2>
                 <ol>
-                    <li>Prepare the Shrimp:
-                            <li>Freezing Instructions: Fried coconut shrimp freezes well, up to 2 months. Reheat for 10
-                                minutes in a 350°F (177°C) oven or until thawed and warm.</li>
-                            <li>Special Tools: Glass Mixing Bowls | Large Skillet | Tongs</li>
-
-                            <li>Shrimp: Large + raw shrimp with tails attached are best for this coconut shrimp recipe.
-                                If
-                                frozen, thaw before starting. I recommend getting them peeled and deveined because that
-                                will
-                                save you time at home. I recommend tails attached because the coconut shrimp are easy to
-                                prep, coat, and handle as an appetizer that way. Feel free to remove the tails before
-                                starting if desired. Can I use frozen cooked shrimp? Yes, you can use frozen cooked
-                                shrimp
-                                in this recipe but starting with raw shrimp is best. Thaw, then use in this recipe as
-                                directed.</li>
-                            <li>Oil: I prefer frying the coconut shrimp in coconut oil for the best taste. You need
-                                enough
-                                to coat the bottom of your skillet, usually about 3 Tablespoons or close to 4.</li>
-                            <li>Serving Sauce: We’ve also tried and loved this dipping sauce too.</li>
-                        </ol>
+                    <li>Thaw shrimp if frozen and pat dry.</li>
+                    <li>Set up breading station: flour, beaten eggs, and Panko + coconut mixture in separate bowls.</li>
+                    <li>Coat each shrimp in flour, then egg, then Panko + coconut.</li>
+                    <li>Heat oil in a skillet over medium heat, enough to coat the bottom.</li>
+                    <li>Fry shrimp 2–3 minutes per side until golden brown and cooked through. Drain on paper towels.</li>
+                    <li>Optional: Sprinkle with chopped cilantro before serving. Serve with dipping sauce if desired.</li>
+                    <li>Freezing tip: Fried coconut shrimp can be frozen up to 2 months. Reheat at 350°F for 10 minutes.</li>
+                </ol>
             </div>
+
         </div>
+    </div>
 
-
-
-    </main>
-    <footer>
-        <p>© Allison J Phillips. Photo Credits: Photo by <a href="https://unsplash.com/@stbuddyp">Buddy An</a>
-            </a> on <a
-                href="https://unsplash.com/photos/a-close-up-of-a-plate-of-food-on-a-table-Ts0GNDn0UTE">Unsplash</a>
+    <!-- FOOTER -->
+    <footer style="text-align:center; margin-top:40px;">
+        <p>© Allison J Phillips. Photo by 
+            <a href="https://unsplash.com/@stbuddyp">Buddy An</a> on 
+            <a href="https://unsplash.com/photos/a-close-up-of-a-plate-of-food-on-a-table-Ts0GNDn0UTE">Unsplash</a>
         </p>
     </footer>
 
-
 </body>
-
 </html>
