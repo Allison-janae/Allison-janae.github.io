@@ -2,139 +2,151 @@
 <html>
 
 <head>
-
-    <!-- meta tags and title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bacon Scallops</title>
+    <title>Bacon Wrapped Scallops</title>
 
-    <!-- external and internal CSS -->
     <link rel="stylesheet" href="styles.css" media="all">
+
     <style>
-        /* base (mobile) styles */
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
+        /* RECIPE PAGE WRAPPER */
+        .recipe-page {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        h1 {
-            text-align: center;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
+        .recipe-page img {
             max-width: 100%;
-            height: 300px;
+            border-radius: 10px;
+            height: auto;
         }
 
-        p {
-            text-align: center;
-        }
-
-        .recipe-container {
+        /* LAYOUT FOR INGREDIENTS + DIRECTIONS */
+        .recipe-flex {
             display: flex;
-            flex-direction: coloumn;
-            /* mobile = stacked vertically*/
-            justify-content: space-between;
-            /*spacing between the two coloumns*/
+            flex-direction: column;
             gap: 40px;
-            padding: 20px;
-
+            margin-top: 30px;
         }
 
-        .ingredients,
-        .directions {
-            width: 100%;
-        }
-
-        /*desktop / landscape tablet view*/
         @media (min-width: 768px) {
-            recipe-container {
+            .recipe-flex {
                 flex-direction: row;
-                /*put ingredients and directions side-by-side*/
-                justify-content: space-between;
                 align-items: flex-start;
-                gap: 40px;
             }
-
-            .ingredients,
-            .directions {
+            .ingredients, .directions {
                 flex: 1;
-                min-width: 300px;
             }
+        }
+
+        .ingredients ul, .directions ol {
+            margin-top: 10px;
+            margin-left: 20px;
+            text-align: left;
+        }
+
+        h1, h2, p {
+            text-align: center;
         }
     </style>
-
 </head>
 
 <body>
 
-    <header>
-        <h1>Bacon Wrapped Scallops</h1>
-        <img src="baconscallops.jpg">
-        <p>Savory Crispy Scallops</p>
-    </header>
+    <!-- NAVIGATION -->
+    <nav id="mainNav">
+        <span class="logo">Allison Janae</span>
+        <span id="navBurger">&#9776;</span>
 
-    <main>
-        <div class="recipe-container">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li>
+                <a href="#">Hot Appetizers ▼</a>
+                <ul>
+                    <li><a href="recipe1.html">Cheese Fondue</a></li>
+                    <li><a href="recipe2.html">Nashville Hot Chicken Dip</a></li>
+                    <li><a href="recipe3.html">Bacon Wrapped Scallops</a></li>
+                    <li><a href="recipe4.html">Philly Cheesesteak Sliders</a></li>
+                    <li><a href="recipe5.html">Coconut Shrimp</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Cold Appetizers ▼</a>
+                <ul>
+                    <li><a href="recipe6.html">Greek Feta Dip</a></li>
+                    <li><a href="recipe7.html">Fruit Dip</a></li>
+                    <li><a href="recipe8.html">Salsa</a></li>
+                    <li><a href="recipe9.html">Chicken Avocado Roll-ups</a></li>
+                    <li><a href="recipe10.html">Cheese Ball Bites</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Favorite Recipe Sites ▼</a>
+                <ul>
+                    <li><a href="https://www.allrecipes.com/" target="_blank">All Recipes</a></li>
+                    <li><a href="https://emilybites.com/" target="_blank">Emily Bites</a></li>
+                    <li><a href="https://www.dinneratthezoo.com/" target="_blank">Dinner At The Zoo</a></li>
+                    <li><a href="https://thelatinahomemaker.com/" target="_blank">The Latin Homemaker</a></li>
+                    <li><a href="https://sallysbakingaddiction.com/" target="_blank">Sally’s Baking Addiction</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- RECIPE CONTENT -->
+    <div class="recipe-page">
+
+        <h1>Bacon Wrapped Scallops</h1>
+        <img src="baconscallops.jpg" alt="Bacon Wrapped Scallops">
+        <p>Savory, crispy, sweet-and-salty perfection.</p>
+
+        <div class="recipe-flex">
+
+            <!-- INGREDIENTS -->
             <div class="ingredients">
                 <h2>Ingredients</h2>
                 <ul>
-                    <li>Bacon Scallop Ingredients</li>
-                        <li>2 pounds large sea scallops patted dry </li>
-                        <li>
-                            1 pound bacon slices cut in half crosswise </li>
-                        <li>
-                            1/4 cup maple syrup</li>
-                        <li>
-                            2 tablespoons soy sauce</li>
-                        <li>
-                            1/4 teaspoon garlic powder</li>
-                        <li>
-                            salt and pepper to taste</li>
-                        <li>
-                            2 tablespoons chopped parsley</li>
-                        <li>
-                            cooking spray</li>
-                    </ul>
+                    <li>2 lbs large sea scallops, patted dry</li>
+                    <li>1 lb bacon slices, cut in half</li>
+                    <li>¼ cup maple syrup</li>
+                    <li>2 tbsp soy sauce</li>
+                    <li>¼ tsp garlic powder</li>
+                    <li>Salt and pepper, to taste</li>
+                    <li>2 tbsp chopped parsley</li>
+                    <li>Cooking spray</li>
+                </ul>
             </div>
 
+            <!-- DIRECTIONS -->
             <div class="directions">
                 <h2>Directions</h2>
                 <ol>
-                    <li>Prepare the Scallops: </li>
-                        <li>
-                            Preheat the broiler. Coat a sheet pan with cooking spray.</li>
-                        <li>
-                            Wrap a slice of bacon around each scallop and secure with a toothpick. Arrange the
-                            scallops in a single layer on the baking pan.</li>
-                        <li>
-                            In a small bowl, mix together the maple syrup, soy sauce, garlic powder, salt and
-                            pepper. Brush half the mixture over the top of each of the scallops.</li>
-                        <li>
-                            Broil for 10-15 minutes, or until bacon is crisp and scallops are cooked through. Brush
-                            the remaining sauce over the scallops halfway through the cook time.</li>
-                        <li>
-                            Sprinkle with parsley, then serve.</li>
-                        </li>
-                    </ol>
+                    <li>Preheat broiler and coat a sheet pan with cooking spray.</li>
+                    <li>Wrap each scallop in a half slice of bacon and secure with a toothpick. Place in a single layer on the pan.</li>
+                    <li>Mix maple syrup, soy sauce, garlic powder, salt, and pepper.</li>
+                    <li>Brush half the mixture over the scallops.</li>
+                    <li>Broil 10–15 minutes, brushing with remaining sauce halfway through.</li>
+                    <li>Sprinkle with parsley and serve warm.</li>
+                </ol>
             </div>
+
         </div>
+    </div>
 
-
-
-    </main>
-    <footer>
-        <p>© Allison J Phillips. Photo Credits: Photo by <a href="https://unsplash.com/@sebastiancoman">Sebastian
-                Coman</a> on <a
-                href="https://unsplash.com/photos/brown-bread-on-white-ceramic-plate-rtJCcnZgdRg">Unsplash</a>
+    <!-- FOOTER -->
+    <footer style="text-align:center; margin-top:40px;">
+        <p>© Allison J Phillips. Photo by 
+            <a href="https://unsplash.com/@sebastiancoman">Sebastian Coman</a> on 
+            <a href="https://unsplash.com/photos/brown-bread-on-white-ceramic-plate-rtJCcnZgdRg">Unsplash</a>
         </p>
     </footer>
 
-
 </body>
-
 </html>
