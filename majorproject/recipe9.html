@@ -5,45 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chicken Avocado Roll-ups</title>
-
     <link rel="stylesheet" href="styles.css" media="all">
 
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            padding: 20px;
+        .recipe-page {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        h1, h2, p {
-            text-align: center;
-        }
-
-        img {
-            display: block;
-            margin: 0 auto;
+        .recipe-page img {
             max-width: 100%;
-            height: 300px;
+            border-radius: 10px;
+            height: auto;
         }
 
-        .recipe-container {
+        .recipe-flex {
             display: flex;
             flex-direction: column;
             gap: 40px;
             margin-top: 30px;
         }
 
-        .ingredients, .directions {
-            width: 100%;
-        }
-
-        .ingredients ul, .directions ol {
-            margin-left: 20px;
-            text-align: left;
-        }
-
         @media (min-width: 768px) {
-            .recipe-container {
+            .recipe-flex {
                 flex-direction: row;
                 align-items: flex-start;
             }
@@ -51,20 +39,63 @@
                 flex: 1;
             }
         }
+
+        .ingredients ul, .directions ol {
+            margin-left: 20px;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        h1, h2, p {
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
 
-    <header>
+    <!-- NAVIGATION -->
+    <nav id="mainNav">
+        <span class="logo">Allison Janae</span>
+        <span id="navBurger">&#9776;</span>
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+
+            <li>
+                <a href="#">Hot Appetizers ▼</a>
+                <ul>
+                    <li><a href="recipe1.html">Cheese Fondue</a></li>
+                    <li><a href="recipe2.html">Nashville Hot Chicken Dip</a></li>
+                    <li><a href="recipe3.html">Bacon Wrapped Scallops</a></li>
+                    <li><a href="recipe4.html">Philly Cheesesteak Sliders</a></li>
+                    <li><a href="recipe5.html">Coconut Shrimp</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#">Cold Appetizers ▼</a>
+                <ul>
+                    <li><a href="recipe6.html">Greek Feta Dip</a></li>
+                    <li><a href="recipe7.html">Fruit Dip</a></li>
+                    <li><a href="recipe8.html">Salsa</a></li>
+                    <li><a href="recipe9.html">Chicken Avocado Roll-ups</a></li>
+                    <li><a href="recipe10.html">Cheese Ball Bites</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="recipe-page">
+
         <h1>Chicken Avocado Roll-ups</h1>
         <img src="chickenwrap.jpg" alt="Chicken Avocado Roll-ups">
         <p>Fresh Chicken Roll-ups</p>
-    </header>
 
-    <main>
-        <div class="recipe-container">
+        <div class="recipe-flex">
 
+            <!-- INGREDIENTS -->
             <div class="ingredients">
                 <h2>Ingredients</h2>
                 <ul>
@@ -81,6 +112,7 @@
                 </ul>
             </div>
 
+            <!-- DIRECTIONS -->
             <div class="directions">
                 <h2>Directions</h2>
                 <ol>
@@ -90,12 +122,15 @@
             </div>
 
         </div>
-    </main>
+    </div>
 
+    <!-- FOOTER -->
     <footer style="text-align:center; margin-top:40px;">
-        <p>© Allison J Phillips. Photo by <a href="https://unsplash.com/@grissphoto">Max Griss</a> on <a href="https://unsplash.com/photos/white-and-brown-food-on-white-ceramic-plate-Spp1G283dow">Unsplash</a></p>
+        <p>© Allison J Phillips. Photo by 
+            <a href="https://unsplash.com/@grissphoto">Max Griss</a> on 
+            <a href="https://unsplash.com/photos/white-and-brown-food-on-white-ceramic-plate-Spp1G283dow">Unsplash</a>
+        </p>
     </footer>
 
 </body>
-
 </html>
