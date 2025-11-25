@@ -1,11 +1,10 @@
-/* Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ==================== BASE STYLES ==================== */
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
@@ -14,7 +13,10 @@ body {
   padding: 20px;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   text-align: center;
 }
 
@@ -25,10 +27,10 @@ img {
   margin: 0 auto;
 }
 
-/* ==================== NAVIGATION ==================== */
+
 nav {
   position: relative;
-  z-index: 10; /* above hero */
+  z-index: 10;
   background-color: darkgreen;
   padding: 10px 20px;
   display: flex;
@@ -63,7 +65,7 @@ nav ul li {
   position: relative;
 }
 
-/* Dropdown */
+
 nav ul ul {
   display: none;
   position: absolute;
@@ -73,7 +75,7 @@ nav ul ul {
   padding: 10px 0;
   min-width: 150px;
   border-radius: 4px;
-  z-index: 20; /* dropdown above hero overlay */
+  z-index: 20;
 }
 
 nav ul ul li {
@@ -86,11 +88,11 @@ nav ul ul li a {
   white-space: nowrap;
 }
 
-nav ul li:hover > ul {
+nav ul li:hover>ul {
   display: block;
 }
 
-/* Burger icon (mobile) */
+/* mobile */
 #navBurger {
   display: none;
   font-size: 30px;
@@ -98,31 +100,33 @@ nav ul li:hover > ul {
   cursor: pointer;
 }
 
-/* ==================== HERO SECTION ==================== */
+
 .hero {
   position: relative;
   height: 60vh;
-  background: url("background.jpg") center/cover no-repeat; /* replace with your image */
+  background: url("background.jpg") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   text-align: center;
-  z-index: 0; /* behind nav */
+  z-index: 0;
 }
 
 .hero::after {
   content: '';
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.4);
-  z-index: 1; /* behind text */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
 }
 
 .hero-text {
   position: relative;
-  z-index: 2; /* above overlay */
+  z-index: 2;
 }
 
 .hero h1 {
@@ -150,7 +154,7 @@ nav ul li:hover > ul {
   background-color: #b94037;
 }
 
-/* ==================== FEATURED RECIPES ==================== */
+
 .featured {
   max-width: 1200px;
   margin: 50px auto;
@@ -191,7 +195,7 @@ nav ul li:hover > ul {
   color: #e85a4f;
 }
 
-/* ==================== ABOUT SECTION ==================== */
+
 .about {
   text-align: center;
   padding: 50px 20px;
@@ -210,7 +214,7 @@ nav ul li:hover > ul {
   margin: 0 auto;
 }
 
-/* ==================== MOBILE RESPONSIVENESS ==================== */
+
 @media screen and (max-width: 768px) {
 
   /* Nav */
@@ -243,10 +247,10 @@ nav ul li:hover > ul {
     position: static;
     background-color: #225522;
     width: 100%;
-    display: none; /* hide by default */
+    display: none;
   }
 
-  nav ul li.open > ul {
+  nav ul li.open>ul {
     display: block;
   }
 
@@ -254,7 +258,7 @@ nav ul li:hover > ul {
     padding: 10px;
   }
 
-  /* Body / Main */
+
   body {
     padding: 10px;
   }
@@ -264,7 +268,7 @@ nav ul li:hover > ul {
     max-width: 100%;
   }
 
-  /* Hero */
+
   .hero {
     height: auto;
     padding: 40px 20px;
@@ -286,9 +290,9 @@ nav ul li:hover > ul {
     font-size: 0.9rem;
   }
 
-  /* Recipe grid */
+
   .recipe-grid {
-    grid-template-columns: 1fr !important; /* single column */
+    grid-template-columns: 1fr !important;
     gap: 15px;
   }
 }
