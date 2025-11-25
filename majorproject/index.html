@@ -6,31 +6,31 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Recipes By Alli</title>
 
-	<!-- CSS -->
+
 	<link rel="stylesheet" href="styles.css" media="all">
 
-	<!-- JS -->
+
 	<script defer>
 		document.addEventListener("DOMContentLoaded", () => {
 
 			const nav = document.querySelector("nav");
 			const burger = document.querySelector("#navBurger");
 
-			// Toggle main nav
+			//main nav
 			function toggleNav() {
 				nav.classList.toggle("open");
 			}
 			burger.addEventListener("click", toggleNav);
 
-			// Mobile submenu toggle
+			// mobile submenu
 			document.querySelectorAll("nav ul > li").forEach(li => {
 				li.addEventListener("click", function (e) {
 
-					// If user clicks an actual submenu link → let it navigate
+					// sub nav let it navigate 
 					if (e.target.tagName === "A" && !this.querySelector("ul")) return;
 					if (e.target.tagName === "A" && this.querySelector("ul") && e.target.parentElement.parentElement !== li) return;
 
-					// Only toggle the dropdown if tapping the parent, not a real link
+					// only toggle the dropdown
 					if (window.innerWidth <= 768 && this.querySelector("ul")) {
 						e.preventDefault();
 						this.classList.toggle("open");
@@ -38,7 +38,7 @@
 				});
 			});
 
-			// Close nav after clicking any link
+			// close nav after clicking any link
 			document.querySelectorAll("nav a").forEach(a => {
 				a.addEventListener("click", () => {
 					nav.classList.remove("open");
@@ -55,7 +55,7 @@
 
 <body class="home">
 
-	<!-- ================= NAV BAR ================= -->
+
 	<nav id="mainNav">
 		<span class="logo">Allison Janae</span>
 
@@ -63,10 +63,10 @@
 
 		<ul>
 
-			<!-- HOME -->
+
 			<li><a href="index.html">Home</a></li>
 
-			<!-- HOT APPETIZERS -->
+
 			<li>
 				<a href="#">Hot Appetizers ▼</a>
 				<ul>
@@ -78,7 +78,7 @@
 				</ul>
 			</li>
 
-			<!-- COLD APPETIZERS -->
+
 			<li>
 				<a href="#">Cold Appetizers ▼</a>
 				<ul>
@@ -90,7 +90,7 @@
 				</ul>
 			</li>
 
-			<!-- FAVORITE SITES -->
+
 			<li>
 				<a href="#">Favorite Recipe Sites ▼</a>
 				<ul>
@@ -127,51 +127,51 @@
 		</ul>
 	</nav>
 
-	<!-- ================= PAGE CONTENT HERE ================= -->
+
 	<main>
 		<main>
 
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-text">
-    <h1>Welcome to My Appetizer Collection</h1>
-    <p>Discover tasty appetizers to impress your guests!</p>
-    <a href="recipe1.html" class="btn">Try a Recipe</a>
-  </div>
-</section>
 
-<!-- Featured Recipes -->
-<section class="featured">
-  <h2>Featured Recipes</h2>
-  <div class="recipe-grid">
-    <a href="recipe1.html" class="recipe-card">
-      <img src="images/cheese-fondue.jpg" alt="Cheese Fondue">
-      <h3>Cheese Fondue</h3>
-    </a>
+			<section class="hero">
+				<div class="hero-text">
+					<h1>Welcome to My Appetizer Collection</h1>
+					<p>Discover tasty appetizers to impress your guests!</p>
+					<a href="recipe1.html" class="btn">Try a Recipe</a>
+				</div>
+			</section>
 
-    <a href="recipe3.html" class="recipe-card">
-      <img src="images/bacon-wrapped-scallops.jpg" alt="Bacon Wrapped Scallops">
-      <h3>Bacon Wrapped Scallops</h3>
-    </a>
 
-    <a href="recipe6.html" class="recipe-card">
-      <img src="images/greek-feta-dip.jpg" alt="Greek Feta Dip">
-      <h3>Greek Feta Dip</h3>
-    </a>
-  </div>
-</section>
+			<section class="featured">
+				<h2>Featured Recipes</h2>
+				<div class="recipe-grid">
+					<a href="recipe1.html" class="recipe-card">
+						<img src="images/cheese-fondue.jpg" alt="Cheese Fondue">
+						<h3>Cheese Fondue</h3>
+					</a>
 
-<!-- About Section -->
-<section class="about">
-  <h2>About This Site</h2>
-  <p>
-    Hi, I'm Allison! I created this collection to share my love of appetizers 
-    that bring people together. Whether you love savory dips or light bites, 
-    there’s something here for every occasion.
-  </p>
-</section>
+					<a href="recipe3.html" class="recipe-card">
+						<img src="images/bacon-wrapped-scallops.jpg" alt="Bacon Wrapped Scallops">
+						<h3>Bacon Wrapped Scallops</h3>
+					</a>
 
-</main>
+					<a href="recipe6.html" class="recipe-card">
+						<img src="images/greek-feta-dip.jpg" alt="Greek Feta Dip">
+						<h3>Greek Feta Dip</h3>
+					</a>
+				</div>
+			</section>
+
+
+			<section class="about">
+				<h2>About This Site</h2>
+				<p>
+					Hi, I'm Allison! I created this collection to share my love of appetizers
+					that bring people together. Whether you love savory dips or light bites,
+					there’s something here for every occasion.
+				</p>
+			</section>
+
+		</main>
 
 
 	</main>
