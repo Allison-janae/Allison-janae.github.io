@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const burger = document.getElementById("navBurger");
   const topItems = document.querySelectorAll("nav > ul > li");
 
-  // ------------------ MOBILE MENU TOGGLE ------------------
+  
   burger.addEventListener("click", () => {
     nav.classList.toggle("open"); // toggle mobile menu
   });
 
-  // ------------------ MOBILE SUBMENU TOGGLE ------------------
+ 
   topItems.forEach(item => {
     const submenu = item.querySelector("ul");
 
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ------------------ CLOSE MENU WHEN CLICKING OUTSIDE ------------------
+ 
   document.addEventListener("click", (e) => {
     if (!e.target.closest("nav")) {
       nav.classList.remove("open"); // close main menu
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // ------------------ OPTIONAL: CLOSE MOBILE MENU WHEN LINK CLICKED ------------------
+ 
   const navLinks = document.querySelectorAll("nav ul li a");
   navLinks.forEach(link => {
     link.addEventListener("click", () => {
